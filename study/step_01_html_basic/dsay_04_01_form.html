@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko-KR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--favicon-->
+	<link rel="apple-touch-icon" href="#" />
+	<link rel="shortcut icon" type="image/x-icon" href="#" />
+	<title>form</title>
+	<style type="text/css">
+		fieldset{width:800px; height:auto; padding:20px; 
+			background-color: #acc;}
+		#form_01{display: none;}
+		label[for="okBtn"]{width: 0; height:0; 
+			display: block; overflow: hidden;}
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<h1>form영역 구조이해하기!!</h1><hr />
+	
+	<form action="*.asp" method="get">
+		<fieldset id="form_01">
+			<legend>기본 폼의 형태 및 내용이해</legend>
+			<input type="입력형태" id="idName" name="서버언어에보내는 이름" value="정보를 받거나 보내는 값" />
+			<label for="idName">연결하고자 하는 id값과 동일</label>
+		</fieldset><!--// #form_01-->
+		
+		<fieldset id="form_02">
+			<legend>입력</legend>
+			<label for="user">input your ID</label>
+			<input type="text" name="user" value="" id="user" />
+			<label for="pwd">inpyt your password</label>
+			<input type="password" name="pwd" value="" id="pwd" />
+			
+			<input type="hidden" name="" value="" />
+		</fieldset><!--// #form_02-->
+		
+		<fieldset id="form_03">
+			<legend>선택</legend>
+			<p>좋아하는 성별을 선택하세요.</p>
+			<input type="radio" name="likeSex" id="male" value="남성" />	
+			<label for="male">남성</label>		
+<!--			id, class like_sex --> 
+<!--		form영역일경우 linkSex --> 
+			
+			<input type="radio" name="likeSex" id="female" value="여성" />	
+			<label for="female">여성</label>		
+			
+			<input type="radio" name="likeSex" id="allmale" value="양성" />	
+			<label for="allmale">양성</label>
+			<hr />
+			<p>좋아하는 음식을 선택하세요</p>
+			<input type="checkbox" name="food" id="chicken" value="치킨" />
+			<label for="chicken">치킨</label>
+			<input type="checkbox" name="food" id="pizza" value="피자" />
+			<label for="pizza">피자</label>
+			<input type="checkbox" name="food" id="burger" value="햄버거" />
+			<label for="burger">햄버거</label>
+		</fieldset><!--// #form_03-->
+		
+		<fieldset id="form_04">
+			<legend>버튼</legend>
+			<input type="submit" id="okBtn" name="okBtn" value="확인 및 전송"/>
+			<label for="okBtn">확인버튼</label>
+			<input type="reset" id="cancleBtn" name="cancleBtn" value="취소" />
+			<label for="cancleBtn">취소버튼</label>
+			<input type="button" id="moreBtn" name="moreBtn" value="주소검색" />
+			<label for="moreBtn">개인 집주소 검색 버튼</label>
+			<input type="file" id="fileCheck" name="fileCheck" value="" />
+			<label for="fileCheck">파일검색 및 첨부 버튼</label>
+			
+		</fieldset><!--// #form_04-->
+		
+		<fieldset id="form_05">
+			<legend>기타형식</legend>
+			
+		</fieldset><!--// #form_05-->		
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
