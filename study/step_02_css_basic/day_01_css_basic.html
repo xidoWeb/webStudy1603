@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko-KR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--	cc:ie6-->
+	<!--[if lte IE 9]>
+		<script type="text/javascript">
+		alert("구형브라우저를 사용하고 계십니다,크롬이나 최신브라우저를 이용하세요.");
+			
+		</script>
+	<![endif]-->
+	<title>Document</title>
+	<style type="text/css">
+/*		div{background-color:#ddd;}*/
+		#wrap {background-color:#ccc;}
+		#header{background-color: #fa0;}
+		h1{color:#f04;}
+		a{color:#f07;}
+		h1 a{color:inherit;}
+		ul > li{background-color:#fff;}
+		ul a{color:deepskyblue;}
+		ol{background-color: #aff;}
+		#article{background-color: #0af;}
+/*		#wrap > h2{}*/
+		#wrap h2{color:#fff;}
+		#article > h2 {color:#fa0;}
+		div[id="wrap"]{}
+		#wrap{}
+		a[href="http://naver.com"]{}
+		a:hover{color:#000;} /* 마우스 올렸을때 */
+		a:active{color:#fa0;} /* 마우스 누르고있을대 */
+		a:visited{}/* 방문한 페이지 */
+		a:focus{outline: 2px solid #000;}/* 활성화 되었을때 */
+		a::before{content:"앞부분"; color:#777;}/* 내용의 앞부분(content로 추가삽입) */
+		a::after{content:"뒷부분입니당"; color:#777;}/* 내용의 뒷부분(content로 추가삽입) */
+	</style>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1>제목<a href="http://naver.com">링크</a></h1>
+			<div> 
+				<ul>
+					<li>list_01</li>
+					<li>list_02</li>
+					<li>list_03</li>
+					<li>
+						<ol>
+							<li><a href="#">추가 리스트</a></li>
+							<li><a href="#">추가 리스트</a></li>
+							<li><a href="#">추가 리스트</a></li>
+							<li><a href="#">추가 리스트</a></li>
+							<li><a href="#">추가 리스트</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div><!--// 이름정의 없음-->
+		</div><!--// #header-->
+		<div id="article">
+			<h2>본문영역</h2>
+		</div><!--// #article-->
+		<div id="footer">
+			<h2>하단 정보영역</h2>
+		</div><!--// #footer-->
+	</div><!--// #wrap-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
