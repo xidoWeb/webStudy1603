@@ -7,7 +7,7 @@
 	<style type="text/css">
 /*		reset.css */
 		*{margin: 0; padding: 0;}
-		
+		ul,ol,li{list-style:none;}
 /*		design */
 		#box{width: 600px; height: 500px;	margin: 0 auto;}
 		#box > div{width: 100%;}
@@ -16,7 +16,13 @@
 				float: left;}
 			#gnb{width:400px; height:30px; background-color:#fff; float:right;
 				margin-top:50px; margin-right:10px;}
-			#gnb>h2{text-indent:-9999em;}
+			#gnb>h2{width: 0; height: 0; overflow: hidden;}
+			#gnb>ul{width:100%; height:100%;}
+			#gnb li{width:15%;height:100%; float: left; 
+			background-color:#ccc; margin-right:2%;}
+			#gnb>ul>.last_margin{margin-right:0;}
+/*			#gnb .last_margin{margin-right:0;}*/
+			#gnb>ul>li>a{width:100%; height:100%; display: block; background-color: #f6f;}
 /*		여백값(공간)을 만들때에는 margin 속성을 사용한다!!  */
 		#section{height:300px;}
 		#section div{height: 50%; float: left;}
@@ -33,17 +39,30 @@
 			<div id="gnb">
 				<h2>메뉴영역</h2>
 				<ul>
-					<li>menu_01</li>
-					<li>menu_02</li>
-					<li>menu_03</li>
-					<li>menu_04</li>
-					<li>menu_05</li>
-					<li>menu_06</li>
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu5</a></li>
+					<li class="last_margin"><a href="#">menu6</a></li>
 				</ul>
 			</div><!--// #gnb-->
 		</div><!--// #header-->
 		<div id="section">
-			<div id="article">article</div><!--// #article-->
+			<div id="article">
+				<ol>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div><!--// #article-->
 			<div id="container">container</div><!--// #container-->
 			<div id="xbox">xbox</div><!--// #container-->
 		</div><!--// #section-->
