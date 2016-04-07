@@ -1,0 +1,33 @@
+/* reset.css */
+*, html, body, h1, h2, h3, h4, h5, h6, p, div, img {
+	margin:0; padding:0; border:0; color:#333;
+	font-size:100%;
+	line-height:1.2;
+	font-family:"myriad pro", arial, nanumGothic, dotum, sans-serif;} 
+table,tr,td,th,thead,tbody,tfoot{
+	border-style:solid; border-color:#333; 	border-width:1px;
+border-spacing:0; border-collapse:collapse;}
+ul, ol, li{list-style: none;}
+a{color:#777;}
+
+
+/* normalize */
+.clearfix::before, .clearfix::after{content:""; display: block; clear: both;}
+
+
+/*
+ * 기본 웹 css형태를 사용할경우에는 class이름 앞에 me라고 작성후_로 구분하여 이름제작
+ * */
+
+
+
+
+
+
+
+
+
+
+
+
+
