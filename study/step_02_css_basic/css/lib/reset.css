@@ -1,9 +1,10 @@
 /* reset.css */
 *, html, body, h1, h2, h3, h4, h5, h6, p, div, img {
 	margin:0; padding:0; border:0; color:#333;
-	font-size:100%;
-	line-height:1.2;
-	font-family:"myriad pro", arial, nanumGothic, dotum, sans-serif;} 
+
+	font: 100%/1.2 "myriad pro", arial, nanumGothic, dotum, sans-serif;
+} 
+h1,h2,h3,h4,h5,h6{font-weight:bold;}
 table,tr,td,th,thead,tbody,tfoot{
 	border-style:solid; border-color:#333; 	border-width:1px;
 border-spacing:0; border-collapse:collapse;}
