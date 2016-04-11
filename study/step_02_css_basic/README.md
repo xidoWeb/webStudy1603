@@ -17,8 +17,7 @@ ___
 ## 선택자!
 > 선택자란 body에있는 코드를 선택해서 어떠한 작업을 할 수 있도록 가능한 무언가..
 
-- .box{} : class 선택자
-- #box{} : id 선택자
+- .box{} : class 선택자,  #box{} : id 선택자
 - div{} , p{}: element선택자/ type선택자
 - div li{} : 자손선택자(해당 element 내부에 존재하는 element를 선택,위치는 정확하지 않다.)
 - div > ul > li{} :자식선택자(element 내부(바로하위)에 존재하는 element 선택.)
@@ -84,21 +83,67 @@ ___
 ![mpbo](./img/readme/mpbo.jpg)
 
 ### margin
-> 여백
+> 여백: 바깥여백(공간 o), 부피o, 배경이 보인다.
+- 자신과 다른 개체와의 공간을 만드는것
+- 한쪽만 처리 가능하다.
+- 한꺼번에 처리가 가능하다.
+	- margin:10px; 위,아래,좌,우 모두 10px
+	- margin:10px 20px; 위,아래 10px 좌,우 20px
+	- margin:10px 20px 30px; 위 10px 좌,우 20px 아래 30px
+	- margin:10px 20px 30px 40px; 시계방향으로 위10 우20px 아래30px 좌40px 
 
 ### padding
-
+> 여백: 안쪽여백(공간o), 부피o, 배경이 보이지 않는다.
+- 자신의 부피가 늘어난다
+- 한쪽만 처리 가능하다.
+- 한꺼번에 처리가 가능하다.
+	- padding:10px; 위,아래,좌,우 모두 10px
+	- padding:10px 20px; 위,아래 10px 좌,우 20px
+	- padding:10px 20px 30px; 위 10px 좌,우 20px 아래 30px
+	- padding:10px 20px 30px 40px; 시계방향으로 위10 우20px 아래30px 좌40px 
+	
 ### border
+> 외곽선: 자신의 외곽형태에 선의 모양을 만드는것
+-border:1px solid #fac; 외곽선을 한꺼번에 처리하기	
+	- border-weight:1px; 외곽선 두께
+	- border-style:solid | dotted | dashed | double....; 외곽선 모양
+	- border-color:#fac; 외곽선 색상
+- 한쪽방향o, 부피o
 
 ### outline
-
-___
-## background
+> 외곽선: 형태나, 크기는 존재하지만 부피는 없다!
+- 한쪽방향만 줄수는 없다!
+- 주로 접근성을 위한 사용이 많다
 
 ___
 ## font
+> font:서체 및 다야한 글씨에대한 내용을 표현하는 속성
+- font:굵기 기울기 크기/행간 서체,서체,서체...;
+	- font-weight:light | normal | bold | bolder | 100 ~ 900...
+	- font-style: italic | normal
+	- font-size: 100% = 1em = 1rem = 12pt = 16px
+	- line-height: 1.2
+	- font-family:"myriad pro", "arial", "맑은고딕";
+- color: ; 글씨색
+- text-decoration: underline | overline ...; 
+- text-overflow:ellipsis | clip; 
+	> ellipsis:지정된 크기의 글씨가 넘칠경우에 ...으로 표기 
+	단, 감싸는 개체는 overflow:hidden;으로 처리해야한다.
+- letter-spacing: ; 자간(글자와 글자사이 간격)
+- word-spacing: ; 어간(단어와 단어사이 간격)
+___
+## position
+- static : 기본
+- fixed : 강제로 브라우저상에서 위치잡기
+- relative : 무언가(absolute)의 기준일때
+- absolute : fixed처럼 완전한 자유는 아니지만 원하는 위치를 정해서 배정가능
 
+> static을 제외한 position 속성값은 다음과 같은 기능을 추가로 가진다.
+- z-index: ;  " - " 값부터 사용이 가능하며, 단위 x, 앞뒤의 배치를 가진다.
+- top, left, right, bottom 위치값을 가질수 있다.
 
+___
+## background
 
 
 
