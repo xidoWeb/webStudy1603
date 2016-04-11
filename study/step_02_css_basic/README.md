@@ -144,9 +144,25 @@ ___
 
 ___
 ## background
+> background란?
+배경이미지를 처리하는 속성
+body영역에서 이미지를 담을때에는 img태그를 사용하는데, img 이미지위에 다른 글씨나 기타 여러 개체를 담을 수 없다!!
+때문에 img태그대신에 배경이미지로 별도로 첨부하여 사용하는 방법
+
+* background: url() repeat position; 
+- background-color
+- background-image:url(); 이미지가져오면 자동으로 패턴
+- background-repeat:repeat | repeat-x | repeat-y | no-repeat;
+- backgrouhd-position:x축 y축;
+	- center center | left top | -100px -200px;
+- background-attatchment: scroll | fixed;
+
+### IR 기법(image replace) : img태그 대체방법
+1. 해당하는 개체는 block태그로 변환 (text-indent)
 
 
-
+### IS 기법(image splite) : ir기법 사용시 확장
+2. 여러개의 이미지를 하나의 판에 모아놓고 필요한 부분을 바로 체크할 수 있도록 처리하는 방법
 
 
 

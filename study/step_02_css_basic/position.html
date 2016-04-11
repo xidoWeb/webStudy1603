@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="./css/lib/reset.css" />
+	<title>Document</title>
+	<style type="text/css">
+		body{height: 3000px;}
+		#wrap{width: 50%; height: 500px; 
+			background-color: rgba(100,100,100,0.5);
+		margin-top:500px;}
+		#wrap>ul{width: 100%; height: 100%;position: relative;}
+		#wrap>ul>li{width: 70px; height: 70px; text-align: center;
+			line-height: 70px; float: left;}
+		.box1{background-color:#fac; position: static;
+				top:0; left:0; z-index: -1000;}
+		.box2{background-color:#caf;position: fixed;
+			top: 0; left: 300px; z-index: 100;}
+		.box3{background-color:#fa0;position: absolute;
+			top: 0; left: 250px; z-index: -50;}
+		.box4{background-color:#7ff;position: relative;
+			top: 30px; left:10px; z-index:100;}
+		.box5{background-color:#ff0;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul>
+			<li class="box1">static</li>
+			<li class="box2">fixed</li>
+			<li class="box3">absolute</li>
+			<li class="box4">relative</li>
+			<li class="box5">normal</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
