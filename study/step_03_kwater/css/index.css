@@ -7,8 +7,24 @@
 #wrap>#header{width:948px;height: 74px; padding: 16px 6px 0;
 	background-color:#f5c; }
 	h1 {width: 98px;height: 60px; background-color: #fff; float: left;}
+	h1>a{width: 100%; height: 100%; display: block;
+		background-image: url("../img/logo.jpg");
+ 		background-repeat: no-repeat; background-position:right center;}
+	h1>a>span{width: 0; height: 0; display: block; overflow: hidden;}
 	#sitemap {width: 226px; height: 15px; background-color: #fff; float: right;
 	margin-bottom: 3px;}
+	#sitemap>ul{width: 100%; height: 100%;}
+	#sitemap>ul>li{ height: 100%; float: left;}
+	#sitemap>ul>.site_01{width: 38px;}
+	#sitemap>ul>.site_02{width: 48px;}
+	#sitemap>ul>.site_03{width: 56px;}
+	#sitemap>ul>.site_04{width: 72px;}
+	#sitemap>ul>.site_01>a{background-image:url("../img/sitemap_1.jpg");}
+	#sitemap>ul>.site_02>a{background-image:url("../img/sitemap_2.jpg");}
+	#sitemap>ul>.site_03>a{background-image:url("../img/sitemap_3.jpg");}
+	#sitemap>ul>.site_04>a{background-image:url("../img/sitemap_4.jpg");}
+	#sitemap>ul>li>a{background-position: center;}
+
 	#gnb {width: 790px; height: 34px; background-color: #aaa; float: right;}
 
 /* ------- #banner ----------------------------------------- */
