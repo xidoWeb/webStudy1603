@@ -68,8 +68,26 @@
 /* ------- #article ----------------------------------------- */
 #wrap>#article{width:948px; height: 808px; 
 	padding:0 6px; background-color:#aac;}
+/*_____ #lnb ______________________*/
 	#lnb{width: 100%;height: 100px;border-bottom: 1px solid #eee; 
-		margin-bottom:28px; background-color: #aaa;}
+		margin-bottom:28px; background-color: #fff;}
+/*brackets 플러그인 : cssfier*/
+
+#lnb > ul { width: 100%; height: 100%; }
+#lnb li { width: 10%; height: 100%; float: left; }
+#lnb a {background-image: url("../img/lnb.png"); }
+.lnb_01>a{background-position:-5px 5px;}
+.lnb_02>a{background-position:-110px 5px;}
+.lnb_03>a{background-position:-215px 5px;}
+.lnb_04>a{background-position:-319px 5px;}
+.lnb_05>a{background-position:-424px 5px;}
+.lnb_06>a{background-position:-529px 5px;}
+.lnb_07>a{background-position:-634px 5px;}
+.lnb_08>a{background-position:-739px 5px;}
+.lnb_09>a{background-position:-843px 5px;}
+.lnb_10>a{background-position:-948px 5px;}
+
+/*_____ #content _______________*/
 	#content{width: 100%; height:638px; background-color: #faf;}
 
 
