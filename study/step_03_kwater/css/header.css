@@ -1,0 +1,44 @@
+/*header.css*/
+/* ------- #header ---------------------------------------- */
+#wrap>#header{width:948px;height: 74px; padding: 16px 6px 0;
+	background-color:#f5c; }
+	h1 {width: 98px;height: 60px; background-color: #fff; float: left;}
+	h1>a{width: 100%; height: 100%; display: block;
+		background-image: url("../img/logo.jpg");
+ 		background-repeat: no-repeat; background-position:right center;}
+	h1>a>span{width: 0; height: 0; display: block; overflow: hidden;}
+	#sitemap {width: 226px; height: 15px; background-color: #fff; float: right;
+	margin-bottom: 3px;}
+	#sitemap>ul{width: 100%; height: 100%;}
+	#sitemap>ul>li{ height: 100%; float: left;}
+	#sitemap>ul>.site_01{width: 42px;}
+	#sitemap>ul>.site_02{width: 52px;}
+	#sitemap>ul>.site_03{width: 60px;}
+	#sitemap>ul>.site_04{width: 72px;}
+	#sitemap>ul>.site_01>a{width:38px; background-image:url("../img/sitemap_1.jpg");}
+	#sitemap>ul>.site_02>a{width:48px; background-image:url("../img/sitemap_2.jpg");}
+	#sitemap>ul>.site_03>a{width:56px; background-image:url("../img/sitemap_3.jpg");}
+	#sitemap>ul>.site_04>a{background-image:url("../img/sitemap_4.jpg");}
+	#sitemap>ul>li>a{background-position: center;float:left;}
+#sitemap a + span{width: 4px; height: 15px; display: block; 
+	background-image: url(../img/sitemap_bar.jpg); float:left;
+	background-repeat:no-repeat; background-position: center;}
+
+	#gnb {width: 790px; height: 34px; float: right;}
+	#gnb>ul{width:inherit; height:inherit;}
+	#gnb>ul>li {height:inherit;	margin-right:30px; float: left;}
+	#gnb>ul>li>a {background-position: center;}
+	.gnb_01{width:132px;}
+	.gnb_02{width:78px;}
+	.gnb_03{width:78px;}
+	.gnb_04{width:78px;}
+	.gnb_05{width:58px;}
+	.gnb_06{width:78px;}
+	#gnb>ul>.gnb_07{width:108px; margin-right:0;}
+	.gnb_01>a{background-image:url("../img/gnb_01.jpg");}
+	.gnb_02>a{background-image:url("../img/gnb_02.jpg");}
+	.gnb_03>a{background-image:url("../img/gnb_03.jpg");}
+	.gnb_04>a{background-image:url("../img/gnb_04.jpg");}
+	.gnb_05>a{background-image:url("../img/gnb_05.jpg");}
+	.gnb_06>a{background-image:url("../img/gnb_06.jpg");}
+	.gnb_07>a{background-image:url("../img/gnb_07.jpg");}
