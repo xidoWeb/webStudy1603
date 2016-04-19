@@ -1,5 +1,4 @@
 # form
-> form legend, 제목, input, checkbox, radio, btn, fieldset, label, method, value
 
 1. form : action, method
 	- action: 연동할 서버파일
