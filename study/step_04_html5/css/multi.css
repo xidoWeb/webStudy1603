@@ -1,0 +1,14 @@
+/* multi.css */
+html, body{height: 100%; }
+#wrap{width: 100%; height: 100%; position: relative;}
+#webHead {width: 80%; height: 30px; padding-top:10px; background-color: #ccc;
+	margin-left: 10%;}
+#gnb {width: 90%; height: 50px; border-bottom: 2px solid #fac;margin:5px 5%;}
+#gnb ul {width: 100%; height: 100%;}
+#gnb li {width: 15%; height: 100%; 
+	float: left; margin-left: 3.5%;}
+#gnb a {font-size:1.5em; color:#fff; text-decoration: none; 
+	padding-top: 10px;}
+#gnb a:hover{text-decoration: underline;}
+video{width: 100%; position: absolute; z-index: -100; 
+left: 0; top: 0;}

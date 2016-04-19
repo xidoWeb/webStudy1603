@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+<!--	<link rel="stylesheet" href="./css/lib/reset.css">-->
+	<title>Document</title>
+	<style>
+		#wrap{width: 600px; height:auto; padding:40px; background-color: #acf; margin: 0 auto;}
+		fieldset{width: 100%; height: 200px; margin-bottom:20px auto; border:2px solid #fff;}
+		legend{font-size:1.5rem; color:#fff;}
+		.point::after{content:"*"; color:#f33;}
+		label{width: 30%; height: 25px; float: left; border-right:1px dotted #fa0; display: block; padding-bottom:5px;}
+		input{width: 60%; height: 25px; float: right; display: block;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<form action="" method="post">
+			<fieldset>
+				<legend>제목</legend>
+				<label for="user" class="point">사용자 이름</label>
+				<input type="text" id="user" name="user" value="" required="required" />
+				<br />
+				<label for="telNum" class="point">전화번호</label>
+				<input type="tel" id="telNum" name="telNum" value="" 
+				required="required" placeholder="전화번호를 입력하세요." />
+				<br />
+				<label for="urlAdd" class="point">웹주소 입력하세요.</label>
+				<input type="url" id="urlAdd" name="urlAdd" value="" 
+				required="required" placeholder="웹주소입력" />
+				<br />
+				<label for="mail" class="point">이메일입력하세요.</label>
+				<input type="email" id="mail" name="mail" value="" 
+				required="required" placeholder="이메일입력하세요" />
+				<br />
+				<label for="searchBox">검색하세요.</label>
+				<input type="search" id="searchBox" name="searchBox" value="" placeholder="검색란"
+					autocomplete="on" />
+			</fieldset>
+<!-- _____________________________________________________________________ -->
+			<fieldset>
+				<legend>제목</legend>
+			</fieldset>
+<!-- _____________________________________________________________________ -->
+			<fieldset>
+				<legend>제목</legend>
+			</fieldset>
+<!-- _____________________________________________________________________ -->
+			<fieldset>
+				<legend>제목</legend>
+				<button type="submit">자료 전송</button>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

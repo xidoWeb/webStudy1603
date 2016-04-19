@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="./css/lib/reset.css">
+	<title>Document</title>
+	<style type="text/css">
+		.box{width: 960px; height: 500px; margin: 0 auto;
+			background-color: #fac; border-bottom: 1px solid #333;}
+		#headerWrap{height: 200px; background-color: #0af;}
+		#bannerWrap{width: 100%; height: 700px; background-color: #0f7;
+			overflow: hidden; position: relative;}
+		#bannerWrap>div{width:960px; height:150px;	
+			position: absolute; top: 50%; margin-top:-75px;
+			 z-index: 100; left: 50%; margin-left: -480px;}
+		#bannerWrap>div>button{width: 70px; height: 150px; 
+			background-color: #ccc; }
+		.btn_01{float: left;}
+		.btn_02{float: right;}
+		#bannerWrap>ul{width: 400%; height: 100%; margin-left:-100%;}
+		#bannerWrap>ul>li{width: 25%; height: 100%; float: left;}
+			.banner_01{background-color:#7ac;}
+			.banner_02{background-color:#caf;}
+			.banner_03{background-color:#cca;}
+			.banner_04{background-color:#aac;}
+		
+		
+		
+		#articleWrap{height: 1000px;}
+		#footerWrap{height: 100px; background-color: #ccc;}
+	</style>
+</head>
+<body>
+	<div class="box" id="headerWrap"></div>
+	<div class="box" id="bannerWrap">
+		<div>
+			<button class="btn_01">L</button>
+			<button class="btn_02">R</button>
+		</div>
+		<ul>
+			<li class="banner_01"></li>
+			<li class="banner_02"></li>
+			<li class="banner_03"></li>
+			<li class="banner_04"></li>
+		</ul>
+	</div>
+	<div class="box" id="articleWrap"></div>
+	<div class="box" id="footerWrap"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

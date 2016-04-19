@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=960" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="stylesheet" href="./css/lib/reset.css" />
+	<link rel="stylesheet" href="./css/sementic.css">
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" href="./css/ie_sementic.css" />
+		<script src="./js/dist/html5shiv.min.js"></script>
+		<script src="./js/dist/ie9.min.js"></script>
+		<script src="./js/dist/PIE.js"></script>
+	<![endif]-->
+	<script src="./js/jquery/jquery-1.12.3.min.js"></script>
+	<script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+	<script src="./js/jquery/jquery-ui.min.js"></script>
+	<title>Document</title>
+	<style>
+		dl{width: 30%;}
+		dl>dt{height:30px;} 
+		dt{background-color: #fff;}
+		dd{background-color: #ccc; border-bottom:1px solid; height:0; overflow: hidden;transition: all 1s;}
+		
+		dt:hover{background-color: #aaa;}
+		dl:hover >dt + dd{background-color: #fa0; height:150px; }
+		dt:hover ~ dd{color: #f33;}
+		
+	</style>
+	<script>$(document).ready(function(){
+	ar
+});</script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="web_header">
+			<hgroup>
+				<h1>html5변형</h1>
+				<h2>sementic구조 파악을 위한 코드이해</h2>
+			</hgroup>
+			<nav id="gnb">
+				<h2>nav</h2>
+				<dl>
+					<dt>title_01</dt>
+						<dd>
+							<ul>
+								<li>list</li>
+								<li>list</li>
+								<li>list</li>
+								<li>list</li>
+								<li>list</li>
+							</ul>
+						</dd>
+					<dt>title_02</dt>
+						<dd>list_02</dd>
+					<dt>title_03</dt>
+						<dd>list_03</dd>
+						
+				</dl>
+			</nav>
+		</header>
+		<aside id="lnb">
+			<h2>aside</h2>
+		</aside>
+		<section id="content">
+			<header>
+				<h1>section</h1>
+			</header>
+			<aside>
+				<h2>sub_aside</h2>
+			</aside>
+		</section>
+		<article id="container">
+			<header>
+				<h1>article</h1>
+			</header>
+		</article>
+		<footer id="web_footer">
+			<h2>footer</h2>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
