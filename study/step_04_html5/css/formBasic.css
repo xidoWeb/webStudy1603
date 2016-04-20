@@ -32,7 +32,8 @@ fieldset li:last-child{border-bottom:0;}
 .point::after{content: "* "; color:#f03; font-size:1.3rem; }
 
 .inputBox li>span{line-height: 30px; font-weight: bold; font-size: 1.2rem;}
-.inputBox li>input{width:40%; height: 100%; border:1px solid #333; box-sizing: border-box;}
+.inputBox li>input{width:40%; height: 100%; border:1px solid #333; box-sizing: border-box;
+	text-indent:0.4rem; line-height:30px;}
 
 .inputBox li>button{width:200px; height:100%; box-shadow:1px 1px 1px #777;
 	cursor: pointer; margin-left:10px;}

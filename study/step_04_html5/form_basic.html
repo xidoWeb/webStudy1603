@@ -41,7 +41,7 @@
 					<ul class="inputBox">
 						<li><span>방미희</span><input type="hidden" id="join_01" name="" value="방미희" /></li>
 						<li>
-							<input type="text" id="join_02" name="" value="" />
+							<input type="text" id="join_02" name="" value="" required placeholder="아이디" />
 							<button type="button" name="" id="idCheck">아이디 중복확인 검사</button>
 							<label for="idCheck">아이디 중복확인 검사</label>
 						</li>
@@ -49,8 +49,8 @@
 							<p></p>
 							<button type="button" id="join_03" name="">파일선택</button>
 						</li>
-						<li><input type="text" id="join_04" name="" value="" /></li>
-						<li><input type="text" id="join_05" name="" value="" /></li>
+						<li><input type="text" id="join_04" name="" value="" required placeholder="패스워드" /></li>
+						<li><input type="text" id="join_05" name="" value="" required placeholder="패스워드 확인" /></li>
 						<li>
 							<select name="" id="join_06">
 								<option value="010">010</option>
@@ -65,9 +65,9 @@
 								<option value="0505">0505</option>
 							</select>
 							<span> <!-- bar --></span>
-							<input type="text" name="" id="tel_02" value="" />
+							<input type="text" name="" id="tel_02" value="" required placeholder="3~4자리 번호" />
 							<span> <!-- bar --></span>
-							<input type="text" name="" id="tel_03" value="" />
+							<input type="text" name="" id="tel_03" value="" required placeholder="4자리 번호" />
 							<label for="tel_02">휴대폰번호 가운데 셋 또는 네자리를 입력하세요.</label>
 							<label for="tel_03">휴대폰번호 마지막 네자리를 입력하세요.</label>
 							<button type="button" name="" >휴대폰 인증</button>
