@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=960" />
+	<link rel="stylesheet" href="./css/lib/reset.css" />
+	<link rel="stylesheet" href="./css/formBasic.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery.color.min.js"></script>
+	<title>Document</title>
+	<style></style><script>$(function(){ });</script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="formHead">
+			<h1>회원가입</h1>
+			<p><strong>*</strong>는 필수 입력사항입니다. 반드시 입력하세요.</p>
+		</header>
+		<div id="formBox">
+			<form action="" method="post">
+				<fieldset>
+					<legend>회원가입 기초 양식</legend>
+					<ol class="infoBox">
+						<li><label for="join_01" class="point">성명</label></li>
+						<li><label for="join_02" class="point">아이디</label></li>
+						<li><label for="join_03">사진</label></li>
+						<li>
+							<label for="join_04" class="point">패스워드
+							<span>특수문자를 포함하여 최소 여덟자 이상의 영문글자를 입력하세요.</span>
+							</label>
+						</li>
+						<li><label for="join_05" class="point">패스워드확인
+							<span>다시한번 패스워드 여덟자 이상을 입력하세요.</span>
+							</label>
+						</li>
+						<li><label for="join_06" class="point">연락처</label></li>
+						<li><label for="join_07" class="point">이메일</label></li>
+						<li><label for="join_08">지역선택</label></li>
+					</ol>
+					<ul class="inputBox">
+						<li><span>방미희</span><input type="hidden" id="join_01" name="" value="방미희" /></li>
+						<li>
+							<input type="text" id="join_02" name="" value="" />
+							<button type="button" name="" id="idCheck">아이디 중복확인 검사</button>
+							<label for="idCheck">아이디 중복확인 검사</label>
+						</li>
+						<li>
+							<input type="text" id="join_03" name="" value="" />
+							<button type="button">파일선택</button>
+						</li>
+						<li><input type="text" id="join_04" name="" value="" /></li>
+						<li><input type="text" id="join_05" name="" value="" /></li>
+						<li>
+							<select name="" id="join_06">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="012">012</option>
+								<option value="013">013</option>
+								<option value="014">014</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+								<option value="0505">0505</option>
+							</select>
+							<span> <!-- bar --></span>
+							<input type="text" name="" id="tel_02" value="" />
+							<span> <!-- bar --></span>
+							<input type="text" name="" id="tel_03" value="" />
+							<label for="tel_02">휴대폰번호 가운데 셋 또는 네자리를 입력하세요.</label>
+							<label for="tel_03">휴대폰번호 마지막 네자리를 입력하세요.</label>
+							<button type="button" name="" >휴대폰 인증</button>
+							<dl class="sms">
+								<dt><abbr title="short messange service">SMS</abbr> 수신동의</dt>
+								<dd><input type="radio" id="mobYes" name="mobYesNo"><label for="mobYes">예</label></dd>
+								<dd><input type="radio" id="mobNo" name="mobYesNo"><label for="mobNo">아니오</label></dd>
+							</dl>
+						</li>
+						<li><input type="text" id="join_07" name="" value="" /></li>
+						<li><input type="text" id="join_08" name="" value="" /></li>
+					</ul>
+				</fieldset>
+			</form>
+		</div>
+	</div><!--// #wrap-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
