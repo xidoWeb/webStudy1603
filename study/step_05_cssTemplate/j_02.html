@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+<!--
+	<select name="" id="">
+		<option value="">2016</option>
+		<option value="">2015</option>
+		<option value="">2014</option>
+		<option value="">2013</option>
+		<option value="">2012</option>
+		<option value="">2011</option>
+		<option value="">1900</option>
+	</select>
+-->
+		
+	<script>
+		document.write('<select id="" name="">');
+		document.write('<option>선택하세요</option>');
+		var i;
+		
+		for(i=2016; i >= 1900; i--){
+			document.writeln("<option>");
+			document.writeln(i);
+			document.writeln("</option>");
+		}
+		document.write('</select>');
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
