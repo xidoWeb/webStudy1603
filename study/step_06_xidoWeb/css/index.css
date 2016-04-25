@@ -1,0 +1,17 @@
+/* index.css */
+
+#container{width: 100%; height:auto; background-color: #ccc;}
+
+/* __________ #xidoHeadWrap ________________________________________________ */
+	#xidoHeadWrap{width:100%; height:300px; background-color:#ddd;}
+		#xidoHead{width:960px; height:100%; margin:0 auto; background-color:#f06;}
+
+/* __________ #indexBanner ________________________________________________ */
+	#indexBanner{width:960px; height:300px; margin:0 auto; background-color:#595959;}
+
+/* __________ #indexContent ________________________________________________ */
+	#indexContent{width:960px; height:300px; margin:0 auto; background-color:#f06;}
+
+/* __________ #xidoFootWrap ________________________________________________ */
+	#xidoFootWrap{width:100%; height:300px; background-color:#ddd;}
+		#xidoFoot{width:960px; height:100%; margin:0 auto; background-color:#595959;}

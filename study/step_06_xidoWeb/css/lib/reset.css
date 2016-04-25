@@ -1,0 +1,39 @@
+/* reset.css */
+*, html, body, h1, h2, h3, h4, h5, h6, p, div, img {
+	margin:0; padding:0; border:0; color:#333;
+
+	font: 100%/1.2 "myriad pro", arial, nanumGothic, dotum, sans-serif;
+} 
+h1,h2,h3,h4,h5,h6{font-weight:bold;}
+table,tr,td,th,thead,tbody,tfoot{
+	border-style:solid; border-color:#333; 	border-width:1px;
+border-spacing:0; border-collapse:collapse;}
+ul, ol, li{list-style: none;}
+a{color:#777;}
+
+/* html5 */
+header, article, section, footer, nav, aside, hgroup, figure{
+	display: block;}
+
+/* normalize */
+h2, h3, h4, h5, h6{width: 0; height: 0; overflow: hidden;}
+.clearfix::before, .clearfix::after{content:""; display: block; clear: both;}
+.me_link a{width:100%; height:100%; background-repeat:no-repeat; display:block;}
+a>span{width: 0; height: 0; display: block; overflow: hidden;}
+
+/*
+ * 기본 웹 css형태를 사용할경우에는 class이름 앞에 me라고 작성후_로 구분하여 이름제작
+ * */
+
+
+
+
+
+
+
+
+
+
+
+
+
