@@ -3,15 +3,44 @@
 #container{width: 100%; height:auto; background-color: #ccc;}
 
 /* __________ #xidoHeadWrap ________________________________________________ */
-	#xidoHeadWrap{width:100%; height:300px; background-color:#ddd;}
-		#xidoHead{width:960px; height:100%; margin:0 auto; background-color:#f06;}
+	#xidoHeadWrap{width:100%; height:60px; background-color:#f06; 
+		position: relative; z-index: 0;}
+		#xidoHead{width:960px; height:100%; margin:0 auto; background-color:inherit; 
+			position: relative;}
+			#headH1 {width: 150px; height: 100%; background-color: #595959; float: left;}
+			.nar {width: 300px; height: 40px; margin-top: 10px; margin-left: 20px;
+					background-color: #acf; float: left;}
+			.site_map {width: 145px; height: 40px; margin-top: 10px; margin-right:40px; 
+						background-color: #acf; float: right;}
+			#gnb {width: 800px; height: 30px; right: 10px; background-color: #fff; 
+					border-bottom: 1px solid #595959;	position: absolute; top:60px;}
+
+
+	/*bg design acc*/
+		#xidoHeadSide{width: 100%; height: 100%; background-color: #595959;
+			position: absolute; z-index:-100; top: 0; left:-50%;}
 
 /* __________ #indexBanner ________________________________________________ */
-	#indexBanner{width:960px; height:300px; margin:0 auto; background-color:#595959;}
+	#indexBanner{width:960px; height:430px; margin:0 auto; overflow: hidden;}
+	#indexBanner>ul{width:300%; height: 100%; margin-left:-100%;  }
+	#indexBanner>ul>li{width:calc(100% / 3); height: 100%; float: left; }
+	#indexBanner>ul>li.banner_1{background-color:#af3;}
+	#indexBanner>ul>li.banner_2{background-color:#fa3;}
+	#indexBanner>ul>li.banner_3{background-color:#3ff;}
+
 
 /* __________ #indexContent ________________________________________________ */
-	#indexContent{width:960px; height:300px; margin:0 auto; background-color:#f06;}
+	#indexContent{width:960px; height:360px; margin:0 auto; background-color:#f06;}
 
 /* __________ #xidoFootWrap ________________________________________________ */
-	#xidoFootWrap{width:100%; height:300px; background-color:#ddd;}
-		#xidoFoot{width:960px; height:100%; margin:0 auto; background-color:#595959;}
+	#xidoFootWrap{width:100%; height:120px; background-color:#595959;}
+		#xidoFoot{width:960px; height:100%; margin:0 auto; background-color:inherit;}
+
+
+
+
+
+
+
+
+
