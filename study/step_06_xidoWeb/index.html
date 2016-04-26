@@ -22,7 +22,17 @@
 		
 		
 	</style>
-	<script>$(document).ready(function(){});</script>
+	<script>
+		
+		$(document).ready(function(){
+//			$()  : css에서의 선택자를 표현한것!! ()내부에 css선택자와 동일하게 작성!(일부 예외)
+//			document.getElementsByClassName("index_btn")
+			$(".index_btn > a").on("click", function(e){
+				e.preventDefault();
+			})
+		});
+		
+	</script>
 </head>
 <body>
 	<div id="container">
@@ -37,6 +47,18 @@
 		</div><!--// #xidoHeadWrap-->
 		
 		<section id="indexBanner">
+			<h2>xido banner</h2>
+			<div class="index_btn index_btn_1">
+				<a href role="button"><span>왼쪽 버튼</span></a>
+			</div>
+			<div class="index_btn index_btn_2">
+				<a href role="button"><span>오른쪽 버튼</span></a>
+			</div>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
 			<ul>
 				<li class="banner_1">banner_1</li>
 				<li class="banner_2">banner_2</li>
@@ -44,7 +66,34 @@
 			</ul>
 		</section>
 		
-		<article id="indexContent"></article>
+		<article id="indexContent">
+			<h2>xido content</h2>
+		<!--index content head영역 (inConHead)-->
+			<header class="in_con_head">
+				<h1>forum</h1>
+				<div class="line"><!--구분선--></div>
+				<div class="more"><a href="#"><span>더 보기</span></a></div>
+			</header>
+		<!--index content naration영역 (inConNar)-->
+			<section class="in_con_nar">
+				<h2>본문영역 포럼 주 내용</h2>
+				<article class="in_con_nav_box"></article>
+				<article class="in_con_nar_box"></article>
+			</section>
+		</article>
+		<article id="indexContent_2">
+			<header class="in_con_head">
+				<h1>test</h1>
+				<div class="line"><!--구분선--></div>
+				<div class="more"><a href="#"><span>더 보기</span></a></div>
+			</header>
+		<!--index content naration영역 (inConNar)-->
+			<section class="in_con_nar">
+				<h2>본문영역 포럼 주 내용</h2>
+				<article class="in_con_nav_box"></article>
+				<article class="in_con_nar_box"></article>
+			</section>
+		</article>
 		
 		<div id="xidoFootWrap">
 			<footer id="xidoFoot"></footer>
