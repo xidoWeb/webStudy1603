@@ -15,15 +15,20 @@
 					float: left; background-image: url("../img/all/header/nar.png");
 					background-repeat: no-repeat; background-position: center;}
 
-			.site_map {width: 145px; height: 45px; margin-top: 8px; margin-right:40px; 
-						background-color: #acf; float: right;}
+			.site_map {width:145px; height:45px; margin-top:8px; margin-right:40px; float: right;}
 			.site_map>ul{width: 100%; height: 20px;}
-			.site_map>ul>li{display:inline-block; margin-right:6px; height: 100%;}
+			.site_map>ul>li{display:inline-block; margin-right:6px; height: 100%; text-align: right;}
 			.site_map>ul>li.margin_last{margin-right: 0;}
 			.site_map>ul>li>a{ color:#fff; font:bold 1.1667em/1.25em "myriad pro"; 
-													font:bold 1.1667rem/1.25rem "myriad pro";
-													word-spacing:-0.2rem;}
+													font:bold italic 1.1667rem/1.25rem "myriad pro";
+													word-spacing:-0.2rem; text-decoration: none;}
 
+			.site_map>form{width: 100%; height: 20px; margin-top: 5px; }
+			.site_map>form>fieldset{width: 100%; height: 100%;}
+			.site_map>form>fieldset>input{width: 125px; height: 20px; float: left;
+				text-indent:.3125rem}
+			.site_map>form>fieldset>button{width: 20px; height: 20px; float: left;
+						color:#fff; background-color: #595959; font-size:1rem;}
 
 			#gnb {width: 800px; height: 30px;background-color: #fff; 
 					border-bottom: 1px solid #595959;	position: absolute; top:60px; right: 10px; }
