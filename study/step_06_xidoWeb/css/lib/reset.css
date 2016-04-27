@@ -19,8 +19,9 @@ header, article, section, footer, nav, aside, hgroup, figure{
 h2, h3, h4, h5, h6{width: 0; height: 0; overflow: hidden;}
 .clearfix::before, .clearfix::after{content:""; display: block; clear: both;}
 .me_link a{width:100%; height:100%; background-repeat:no-repeat; display:block;}
-a>span{width: 0; height: 0; display: block; overflow: hidden;}
-
+a>span, .me_hidden{width: 0; height: 0; display: block; overflow: hidden;}
+.me_first{margin-left: 0 !important; padding-left: 0 !important; border-left: 0 !important;}
+.me_last{margin-right: 0 !important; padding-right: 0 !important; border-right: 0 !important;}
 /*
  * 기본 웹 css형태를 사용할경우에는 class이름 앞에 me라고 작성후_로 구분하여 이름제작
  * */
