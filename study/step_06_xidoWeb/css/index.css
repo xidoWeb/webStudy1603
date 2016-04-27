@@ -1,75 +1,16 @@
+@import url("./xidoHeadWrap.css");
+@import url("./indexBanner.css");
+@import url("./indexContent.css");
+@import url("./xidoFootWrap.css");
+
 /* index.css */
 
-#container{width: 100%; height:auto; padding-top: 60px; background-color: #ccc;}
-
-/* __________ #xidoHeadWrap ________________________________________________ */
-	#xidoHeadWrap{width:100%; height:60px; background-color:#f06; 
-		position: fixed; z-index: 500; top:0; left:0;}
-		#xidoHead{width:960px; height:100%; margin:0 auto; background-color:inherit; 
-			position: relative;}
-			#headH1 {width: 150px; height: 100%; background-color: #595959; float: left;}
-			.nar {width: 300px; height: 40px; margin-top: 10px; margin-left: 20px;
-					background-color: #acf; float: left;}
-			.site_map {width: 145px; height: 40px; margin-top: 10px; margin-right:40px; 
-						background-color: #acf; float: right;}
-			#gnb {width: 800px; height: 30px;background-color: #fff; 
-					border-bottom: 1px solid #595959;	position: absolute; top:60px; right: 10px; }
 
 
-	/*bg design acc*/
-		#xidoHeadSide{width: 100%; height: 100%; background-color: #595959;
-			position: absolute; z-index:-100; top: 0; left:-50%;}
-
-/* __________ #indexBanner ________________________________________________ */
-	#indexBanner{width:960px; height:430px; margin:0 auto; overflow: hidden; position: relative;}
-	/*banner_btn*/
-	.index_btn{width:60px; height: 82px; position: absolute; top:50%; margin-top:-40px;}
-	.index_btn>a{width: 100%; height: 100%; display: block;}
-	.index_btn_1{background-color: #77f; left:10px;}
-	.index_btn_2{background-color: #292929;right:10px;}
-	/* indicator */
-	#indexBanner>ol{width:46px; height:12px; position: absolute;z-index:200; right:100px; bottom:20px;}
-	#indexBanner>ol>li{width:12px; height:12px;margin-right:5px; float: left;	
-				background-color: #f06; cursor: pointer; border-radius:50%;}
-	#indexBanner>ol>li:last-child{margin-right: 0;}
-
-	/* banner */
-	#indexBanner>ul{width:300%; height: 100%; margin-left:-100%;  }
-	#indexBanner>ul>li{width:calc(100% / 3); height: 100%; float: left;
-/*			transition:margin-left 2s ease-out 2s;*/
-		transition-property:all;
-		transition-duration: 2s;
-		transition-timing-function: cubic-bezier(.27,1.47,.64,-0.31);
-		transition-delay: 0.3s;
-		}
-
-	#indexBanner>ul>li.banner_1{background-color:#af3;}
-	#indexBanner>ul>li.banner_2{background-color:#fa3;}
-	#indexBanner>ul>li.banner_3{background-color:#3ff;}
-
-	/*test*/
-	.index_btn_1:hover ~ ul>li:first-child{margin-left:calc(100% / 3);}
-	.index_btn_2:hover ~ ul>li:first-child{margin-left:calc(-100% / 3);}
 
 
-/* __________ #indexContent ________________________________________________ */
-	#indexContent{width:900px; min-height:320px; height:auto; margin:0 auto; background-color:#f06;	padding: 20px 30px;}
-		.in_con_head{width: 100%; height: 22px; margin-bottom: 18px; background-color:#fa0;}
-		.in_con_head> h1{width: 60px; height: 22px; margin-right: 8px; float: left;}
-		.in_con_head>.line{width:calc(100% - 116px); float: left; height: 10px; 
-			border-bottom:1px solid #fff;}
-		.in_con_head>.more{width: 40px; height: 22px; margin-left: 8px; float: right; }
-
-		.in_con_nar{width: 100%; height: 280px; background-color:#fa0; margin-bottom:20px;}
-		.in_con_nar>.in_con_nav_box{}
-		.in_con_nar>.in_con_nar_box{}
 
 
-		.in_con_2{width:45%; float: left; margin-right:2.5%;}
-
-/* __________ #xidoFootWrap ________________________________________________ */
-	#xidoFootWrap{width:100%; height:120px; background-color:#595959;}
-		#xidoFoot{width:960px; height:100%; margin:0 auto; background-color:inherit;}
 
 
 

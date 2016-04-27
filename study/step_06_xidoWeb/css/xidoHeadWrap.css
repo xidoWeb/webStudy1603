@@ -1,0 +1,19 @@
+/*xidoHeadWrap.css*/
+#container{width: 100%; height:auto; padding-top: 60px; background-color: #ccc;}
+/* __________ #xidoHeadWrap ________________________________________________ */
+	#xidoHeadWrap{width:100%; height:60px; background-color:#f06; 
+		position: fixed; z-index: 500; top:0; left:0;}
+		#xidoHead{width:960px; height:100%; margin:0 auto; background-color:inherit; 
+			position: relative;}
+			#headH1 {width: 150px; height: 100%; background-color: #595959; float: left;}
+			.nar {width: 300px; height: 40px; margin-top: 10px; margin-left: 20px;
+					background-color: #acf; float: left;}
+			.site_map {width: 145px; height: 40px; margin-top: 10px; margin-right:40px; 
+						background-color: #acf; float: right;}
+			#gnb {width: 800px; height: 30px;background-color: #fff; 
+					border-bottom: 1px solid #595959;	position: absolute; top:60px; right: 10px; }
+
+
+	/*bg design acc*/
+		#xidoHeadSide{width: 100%; height: 100%; background-color: #595959;
+			position: absolute; z-index:-100; top: 0; left:-50%;}

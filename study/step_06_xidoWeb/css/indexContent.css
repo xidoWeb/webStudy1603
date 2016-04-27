@@ -1,0 +1,15 @@
+/*indexContent.css*/
+/* __________ #indexContent ________________________________________________ */
+	#indexContent{width:900px; min-height:320px; height:auto; margin:0 auto; background-color:#f06;	padding: 20px 30px;}
+		.in_con_head{width: 100%; height: 22px; margin-bottom: 18px; background-color:#fa0;}
+		.in_con_head> h1{width: 60px; height: 22px; margin-right: 8px; float: left;}
+		.in_con_head>.line{width:calc(100% - 116px); float: left; height: 10px; 
+			border-bottom:1px solid #fff;}
+		.in_con_head>.more{width: 40px; height: 22px; margin-left: 8px; float: right; }
+
+		.in_con_nar{width: 100%; height: 280px; background-color:#fa0; margin-bottom:20px;}
+		.in_con_nar>.in_con_nav_box{}
+		.in_con_nar>.in_con_nar_box{}
+
+
+		.in_con_2{width:45%; float: left; margin-right:2.5%;}
