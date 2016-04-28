@@ -1,15 +1,46 @@
 /*indexContent.css*/
 /* __________ #indexContent ________________________________________________ */
 	#indexContent{width:900px; min-height:320px; height:auto; margin:0 auto; background-color:#f06;	padding: 20px 30px;}
-		.in_con_head{width: 100%; height: 22px; margin-bottom: 18px; background-color:#fa0;}
-		.in_con_head> h1{width: 60px; height: 22px; margin-right: 8px; float: left;}
+		.in_con_head{width: 100%; height: 22px; margin-bottom: 18px;}
+		.in_con_head> h1{width: 60px; height: 22px; font-size:22px; font-size:1.375rem; margin-right: 8px; float: left;
+				text-align: right;line-height:22px; line-height:1.375rem; color:#fff; font-style: italic;}
 		.in_con_head>.line{width:calc(100% - 116px); float: left; height: 10px; 
 			border-bottom:1px solid #fff;}
 		.in_con_head>.more{width: 40px; height: 22px; margin-left: 8px; float: right; }
+		.in_con_head>.more>a>i{font-size:22px; font-size:1.375rem; color:#fff;
+				transition: all 0.5s linear;}
+/*
+ * transition-property:;
+ * transition-duration:;
+ * transition-timing-function:;
+ * transition-delay:;
+ * - transition:property   duration   timing-function   delay;
+ * - transition:무엇 시간 속도감 몇초뒤;
+ * */
 
-		.in_con_nar{width: 100%; height: 280px; background-color:#fa0; margin-bottom:20px;}
-		.in_con_nar>.in_con_nav_box{}
-		.in_con_nar>.in_con_nar_box{}
+		.in_con_head>.more:hover i{transform:rotate(90deg); color:#595959;}
+
+/*transform: 변형;
+ *   rotate();  | rotateX() | rotateY() | rotateZ()  :  각도 (deg단위)
+ * 	 scale(); 	| scaleX()	| scaleY()	: 크기비율 1을 100%로 인지
+ * 	 skew(); 		| skewX() 	| skewY()	  : 도형의 비틀기 	
+ * 	 translate()| sranslateX() | translateY() :이동 
+ * */
+
+		.in_con_nar{width: 100%; height:auto; background-color:#fa0; margin-bottom:20px;}
+		.in_con_nar::after{content:""; display: block; clear: both;}
+		.in_con_nar>.in_con_nav_box{width:380px; height:280px; float:left; background-color:rgba(100,100,50,.3);}
+		.in_con_nar>.in_con_nav_box>ul{}
+		.in_con_nar>.in_con_nav_box>ul>li{}
+		.in_con_nar>.in_con_nav_box>ul>li>a{}
+
+		.in_con_nar>.in_con_nar_box{width: 520px; height: 280px; float:left; background-color:rgba(200,200,200,.3);}
 
 
 		.in_con_2{width:45%; float: left; margin-right:2.5%;}
+
+
+
+
+
+

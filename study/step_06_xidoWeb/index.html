@@ -7,6 +7,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="#" />
 	<link rel="apple-touch-icon" href="#" />
 	<link rel="stylesheet" href="./css/lib/reset.css" />
+	<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/index.css">
 	<!--[if lte IE 9]>
 		<script src="./js/dist/html5shiv.min.js"></script>
@@ -37,7 +38,7 @@
 <body>
 	<div id="container">
 		<div id="xidoHeadWrap">
-			<header id="xidoHead">
+			<header id="xidoHead" role="banner">
 				<h1 id="headH1"><a href="index.html"><span>xido design education</span></a></h1>
 				<div class="nar"><!--메뉴 디자인--></div>
 				<div class="site_map">
@@ -47,7 +48,7 @@
 						<li><a href="#">Join</a></li>
 						<li class="margin_last"><a href="#">Q&amp;A</a></li>
 					</ul>
-					<form action="#" method="get">
+					<form action="#" method="get" role="search">
 						<fieldset>
 							<legend>xido웹 검색</legend>
 							<input type="search" name="searchBox" id="searchBox" value="" />
@@ -56,12 +57,22 @@
 						</fieldset>
 					</form>
 				</div><!--// .site_map-->
-				<nav id="gnb"></nav>
+				<nav id="gnb" role="navigation">
+					<h2>xido_web menu</h2>
+					<ul role="menubar">
+						<li><a href="#">about.xido</a></li>
+						<li><a href="#">graphic.basic</a></li>
+						<li><a href="#">design.guide</a></li>
+						<li><a href="#">design.portfolio</a></li>
+						<li><a href="#">gallery</a></li>
+						<li><a href="#">guest</a></li>
+					</ul>
+				</nav>
 			</header>
-			<div id="xidoHeadSide"><!--side design--></div>
+			<div id="xidoHeadSide"><!--side design : 상단 배경 로고옆 회색박스--></div>
 		</div><!--// #xidoHeadWrap-->
 		
-		<section id="indexBanner">
+		<section id="indexBanner" aria-atomic="false">
 			<h2>xido banner</h2>
 			<div class="index_btn index_btn_1">
 				<a href role="button"><span>왼쪽 버튼</span></a>
@@ -81,37 +92,35 @@
 			</ul>
 		</section>
 		
-		<article id="indexContent">
+		<article id="indexContent" role="main">
 			<h2>xido content</h2>
 		<!--index content head영역 (inConHead)-->
 			<header class="in_con_head">
 				<h1>forum</h1>
 				<div class="line"><!--구분선--></div>
-				<div class="more"><a href="#"><span>더 보기</span></a></div>
+				<div class="more"><a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i><span>더 보기</span></a></div>
 			</header>
 		<!--index content naration영역 (inConNar)-->
 			<section class="in_con_nar">
 				<h2>본문영역 포럼 주 내용</h2>
-				<article class="in_con_nav_box"></article>
-				<article class="in_con_nar_box"></article>
-			</section>
-		</article>
-		<article id="indexContent_2">
-			<header class="in_con_head">
-				<h1>test</h1>
-				<div class="line"><!--구분선--></div>
-				<div class="more"><a href="#"><span>더 보기</span></a></div>
-			</header>
-		<!--index content naration영역 (inConNar)-->
-			<section class="in_con_nar">
-				<h2>본문영역 포럼 주 내용</h2>
-				<article class="in_con_nav_box"></article>
+				<article class="in_con_nav_box">
+					<h3>포럼 메뉴 링크</h3>
+					<ul>
+						<li><a href="#">visual design</a></li>
+						<li><a href="#">package design</a></li>
+						<li><a href="#">web design</a></li>
+						<li><a href="#">industrial design</a></li>
+						<li><a href="#">interior design</a></li>
+						<li><a href="#">ui/ux design</a></li>
+					</ul>
+				</article>
 				<article class="in_con_nar_box"></article>
 			</section>
 		</article>
 		
+		
 		<div id="xidoFootWrap">
-			<footer id="xidoFoot">
+			<footer id="xidoFoot" role="contentinfo">
 				<h2></h2>
 				<div class="addBox"></div>
 				<div class="etc"></div>
