@@ -9,7 +9,7 @@ table,tr,td,th,thead,tbody,tfoot{
 	border-style:solid; border-color:#333; 	border-width:1px;
 border-spacing:0; border-collapse:collapse;}
 ul, ol, li{list-style: none;}
-a{color:#777;}
+a{color:#777; text-decoration: none;}
 
 /* html5 */
 header, article, section, footer, nav, aside, hgroup, figure{
