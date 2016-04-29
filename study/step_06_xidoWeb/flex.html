@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/lib/reset.css" />
+	<title>Document</title>
+	<style>
+		.box1{width:500px; height:auto; margin:0 auto; background-color:#f7c; padding-top:20px;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+		}
+		
+			.box1>li{text-align:center; font-size:2em; line-height:200px; font-weight: bold;}
+			.flex1{flex:1; height:100%; background:rgba(200, 200, 150, 0.3);}
+			.flex2{flex:2; height:100%; background:rgba(100, 100, 150, 0.3);}
+		
+		.box2{width:500px; height:200px; margin:0 auto; background-color:#7cf;}
+		
+/*		li{display: flex; flex:1;}*/
+	</style>
+</head>
+<body>
+	<ul class="box1">
+		<li class="flex1">flex1</li>
+		<li class="flex2">flex2</li>
+	</ul>
+	<div class="box2"></div>
+</body>
+</html>
