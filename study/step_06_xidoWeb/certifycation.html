@@ -56,14 +56,27 @@
 						</dd>
 					</dl>
 					<dl class="telecom">
-						<dt><label for="">이동통신사</label></dt>
-						<dd><input type="radio" name="telCom" id="sk" value="sk" >sk</dd>
-						<dd><input type="radio" name="telCom" id="kt" value="kt" >kt</dd>
-						<dd><input type="radio" name="telCom" id="kg" value="kg" >kg</dd>
+						<dt><label for="sk">이동통신사</label></dt>
+						<dd><input type="radio" name="telCom" id="sk" value="sk" >
+						<label for="sk">sk</label></dd>
+						<dd><input type="radio" name="telCom" id="kt" value="kt" >
+						<label for="kt">kt</label></dd>
+						<dd>
+							<input type="radio" name="telCom" id="kg" value="lg" >
+							<label for="lg">lg</label>
+						</dd>
 					</dl>
 				</fieldset>
 				<fieldset>
 					<legend>인증 확인 및 전송</legend>
+					<div class="check">
+						<label>
+							<input type="checkbox" name="check" id="check" value="check">
+							개인정보 활용에 동의합니다.
+						</label>
+					</div>
+					<button type="submit">확인</button>
+					<button type="reset">취소</button>
 				</fieldset>
 			</form>
 		</article>
