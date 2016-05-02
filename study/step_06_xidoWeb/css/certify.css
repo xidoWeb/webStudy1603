@@ -1,0 +1,56 @@
+/* certify.css */
+
+#content{width: 450px; height: 365px; margin: 0 auto; background-color: #4cc;}
+
+#certifyBox{width: calc(100% - 38px); height:44px; background-color: #f06;
+		padding-top: 28px; padding-left: 38px;}
+#certifyBox>h1{width: 100%; height: 22px; color:#fff; font-size: 1.375rem;}
+
+#inputWrap{width:calc(100% - 76px); height:262px; padding: 14px 38px 18px;}
+#inputWrap>h2{width: 100%; height: 18px; font-size:1.1667rem; margin-bottom: 9px;}
+#inputWrap>p{width: 100%; height: 34px; font-size:1rem; margin-bottom: 12px;}
+#inputWrap>form{width: 100%; height: 187px; background-color: #acf;}
+
+#inputWrap>form>fieldset:first-of-type{width:calc(100% - 20px); height:55px;
+	padding:20px 10px; background-color: #ddd;}
+#inputWrap>form>fieldset:last-of-type{width: 100%; }
+#inputWrap dl{width: 100%; height:20px; margin-bottom:15px; background-color: #fff;}
+#inputWrap dl>dt{width: 90px; height: 100%; float: left;}
+#inputWrap dl>dd{width: 90px; height: 100%; float: left;}
+#inputWrap dl>dd:last-of-type{width: 75px;}
+
+.tel_num{}
+.tel_num>dt{}
+.tel_num>dt>label{line-height:1.25rem; font-size: 1.1em;}
+.tel_num>dd{}
+.tel_num>dd:nth-of-type(1){}
+.tel_num>dd:nth-of-type(2){}
+.tel_num>dd:nth-of-type(3){}
+.tel_num>dd>select{width:75px; height:100%; border:1px solid  #595959;float:left;}
+.tel_num>dd>input{width:75px; height:100%; border:1px solid  #595959; float:left;
+	 box-sizing:border-box; text-indent:0.0625rem; line-height:1.25rem;}
+.tel_num>dd>.dash_line{width: 8px; height: 10px; display: block; float: right;
+	 border-bottom: 1px solid  #595959; margin-right: 4px;}
+.telecom{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
