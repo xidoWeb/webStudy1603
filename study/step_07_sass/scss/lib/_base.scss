@@ -1,0 +1,29 @@
+$main: #0af;
+$sub: #fa0;
+$sub2: #acf;
+$black: #333;
+$white: #fff;
+$line: 1px solid $black;
+
+@mixin test{
+	width:100%; height:100%; display: block; 
+	background-repeat: no-repeat;
+	>span{width: 0; height: 0; display: inherit; overflow: hidden;}
+}
+@mixin menu($w:500px, $h:30px,$mr:30px, $li_w:100px, $li_h:100%){
+	width:$w; height:$h; 
+	>li{float: left; margin-right: $mr;
+		&:last-child{width: $li_w; height:$li_h; margin-right: 0;}
+		>a{@include test;}
+	}//li
+}
+
+
+
+
+
+
+
+
+
+

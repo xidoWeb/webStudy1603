@@ -1,1 +1,44 @@
+@import "./lib/base";
 /* 테스트 */
+
+html, body{height: 100%;}
+#wrap{width: 960px; height: auto; margin: 0 auto;
+	#header{width: 100%; height: 300px; background-color:$main;}
+	
+	#section{width: 100%; height: 200px; background-color:$sub;}
+	#container{width: 100%; height: 400px; background-color:$sub2;}
+	#footer{width: 100%; height: 200px; background-color:$main;
+		border-top:$line;}
+	#box{@extend #header; height: 800px;}
+	#box2{@extend #section; background-color:darken($sub,30%);}
+	#box3{@extend #container;width:50%; margin: auto;}
+}// #wrap
+
+#header{
+	>h1{width: 100px; height: 100px; background-color:$sub2;
+		>a{@include test;}
+	}
+	
+	>ul{	@include menu($w:800px); background-color: #fff;
+		>li{background-color: #acc;}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,2 +1,73 @@
 @charset "UTF-8";
 /* 테스트 */
+html, body {
+  height: 100%; }
+
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+  #wrap #header, #wrap #box {
+    width: 100%;
+    height: 300px;
+    background-color: #0af; }
+  #wrap #section, #wrap #box2 {
+    width: 100%;
+    height: 200px;
+    background-color: #fa0; }
+  #wrap #container, #wrap #box3 {
+    width: 100%;
+    height: 400px;
+    background-color: #acf; }
+  #wrap #footer {
+    width: 100%;
+    height: 200px;
+    background-color: #0af;
+    border-top: 1px solid #333; }
+  #wrap #box {
+    height: 800px; }
+  #wrap #box2 {
+    background-color: #664400; }
+  #wrap #box3 {
+    width: 50%;
+    margin: auto; }
+
+#header > h1, #wrap #box > h1 {
+  width: 100px;
+  height: 100px;
+  background-color: #acf; }
+  #header > h1 > a, #wrap #box > h1 > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat; }
+    #header > h1 > a > span, #wrap #box > h1 > a > span {
+      width: 0;
+      height: 0;
+      display: inherit;
+      overflow: hidden; }
+#header > ul, #wrap #box > ul {
+  width: 800px;
+  height: 30px;
+  background-color: #fff; }
+  #header > ul > li, #wrap #box > ul > li {
+    float: left;
+    margin-right: 30px; }
+    #header > ul > li:last-child, #wrap #box > ul > li:last-child {
+      width: 100px;
+      height: 100%;
+      margin-right: 0; }
+    #header > ul > li > a, #wrap #box > ul > li > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-repeat: no-repeat; }
+      #header > ul > li > a > span, #wrap #box > ul > li > a > span {
+        width: 0;
+        height: 0;
+        display: inherit;
+        overflow: hidden; }
+  #header > ul > li, #wrap #box > ul > li {
+    background-color: #acc; }
+
+/*# sourceMappingURL=test_01.css.map */
