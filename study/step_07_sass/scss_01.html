@@ -4,18 +4,27 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" href="./css/scss_01.css" />
+	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<title>Document</title>
+	<script>
+		$(function(){
+			$("#header").find("a").on("click", function(e){
+				e.preventDefault();
+				$("html, body").animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="wrap">
 		<div id="header">
 			<h1><a href="#">logo</a></h1>
 			<ul>
-				<li><a href="#">메뉴_1</a></li>
-				<li><a href="#">메뉴_2</a></li>
-				<li><a href="#">메뉴_3</a></li>
-				<li><a href="#">메뉴_4</a></li>
-				<li><a href="#">메뉴_5</a></li>
+				<li><a href="#article">메뉴_1</a></li>
+				<li><a href="#aside">메뉴_2</a></li>
+				<li><a href="#content">메뉴_3</a></li>
+				<li><a href="#content2">메뉴_4</a></li>
+				<li><a href="#footer">메뉴_5</a></li>
 			</ul>
 		</div>
 		<div id="article">

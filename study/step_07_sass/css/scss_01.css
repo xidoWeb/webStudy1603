@@ -1,10 +1,12 @@
 @charset "UTF-8";
-/* 변환 여부 확인 */
+@import url(https://fonts.googleapis.com/css?family=Overlock:400,900italic,700,700italic,900,400italic);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 #footer { width: 100px; height: 100px; background-color: #fff; }
 #footer > a { font-size: 10px; }
 #footer > a > span { background-color: #aaa; }
 
-* { margin: 0; padding: 0; border: 0; }
+/* 변환 여부 확인 */
+* { margin: 0; padding: 0; border: 0; font-family: sans-serif; }
 
 *:focus { outline: 2px solid #fa0; }
 
@@ -20,7 +22,7 @@ html, body { height: 100%; }
 #wrap > #footer { width: 100%; height: 100px; background-color: #DDDDDD; }
 
 #header > h1 { width: 100px; height: 30px; float: left; background-color: #FFFFFF; text-align: center; line-height: 30px; }
-#header > h1 > a { color: #333333; font-size: 1.2rem; }
+#header > h1 > a { color: #333333; font-size: 1.2rem; font-family: 'Overlock', cursive; }
 #header > ul { width: 600px; height: 30px; float: right; background-color: #FFFFFF; }
 #header > ul li { width: calc((100% - 4px) / 5); height: 100%; border-right: 1px solid #FF0066; float: left; text-align: center; line-height: 30px; list-style: none; }
 #header > ul li:last-child { border-right: 0; }

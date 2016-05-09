@@ -1,34 +1,15 @@
+@import "./lib/scss_basic";
+
+
+//@import "./lib/_scss_basic.scss";
+
 // scss_01.scss 
 // 한줄주석은 compile이 되지 않는다.
 /* 변환 여부 확인 */
+// google.com/fonts
 
-$mainColor: #FF0066; 
-$sub1Color: #DDDDDD; 
-$sub2Color: #595959; 
-$white: #FFFFFF; 
-$black: #333333; 
-$line: 1px solid $mainColor;
-$width:100%;
-%test{
-	width: 100px; height: 100px; background-color: #fff;
-	>a{font-size:10px;
-		>span{background-color: #aaa;}
-	}
-}
 
-@mixin formBox($w:80%, $h:30px, $bg1:#0cc, $bg2:#ccc){
-	width: 400px; height: auto; border:$line; border-color:$white; margin: 0 auto;
-	>fieldset{
-		width: 100%; height: 100%; border: 0; 
-		>legend{width: 0; height: 0; overflow: hidden;}
-		>input{width:$w; height:$h;margin-left: 10%; background-color:$bg1;
-			&[type="button"]{font-weight:bold; height: 50px; background-color:$bg2;}
-			&[type="button"]:hover{background-color:#0af;}
-		}// input
-	}// fieldset
-}// mixin
-
-*{margin: 0; padding: 0; border: 0;}
+*{margin: 0; padding: 0; border: 0; font-family:sans-serif;}
 *:focus{outline: 2px solid #fa0;}
 
 html, body{height: 100%;}
@@ -47,7 +28,7 @@ html, body{height: 100%;}
 #header{
 	>h1{width: 100px; height: 30px; float: left; background-color:$white;
 			text-align: center; line-height: 30px;
-		>a{color:$black; font-size:1.2rem;}
+		>a{color:$black; font-size:1.2rem; font-family: 'Overlock', cursive;}
 	}// h1
 	>ul{width: 600px; height: 30px; float: right; background-color:$white;
 		li{width:calc((100% - 4px) / 5); height: 100%;
@@ -55,8 +36,9 @@ html, body{height: 100%;}
 			list-style: none;
 			&:last-child{border-right: 0;}
 			a{color:$sub2Color; text-decoration: none; transition: all 0.5s ease;
+			//	font-family:'Noto Sans KR';
 				&:hover{text-decoration:underline; font-weight:bold; font-size: 1.1rem;
-					color:$mainColor;}
+					color:$mainColor; }
 			}//a
 		}// li
 	}// ul
@@ -74,12 +56,6 @@ html, body{height: 100%;}
 #footer{
 	@extend %test;
 }
-
-// @extend   =>  #box>a, #box2>a, #box3>a{}
-// @mixin=>@include  => #box>a{} #box2>a{} #box3>a{}
-
-
-
 
 
 
