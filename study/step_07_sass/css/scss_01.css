@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* 변환 여부 확인 */
+#footer { width: 100px; height: 100px; background-color: #fff; }
+#footer > a { font-size: 10px; }
+#footer > a > span { background-color: #aaa; }
+
+* { margin: 0; padding: 0; border: 0; }
+
+*:focus { outline: 2px solid #fa0; }
+
+html, body { height: 100%; }
+
+#wrap { width: 100%; height: 100%; margin: 0 auto; }
+#wrap > div { padding-top: 50px; height: calc(100% - 50px); }
+#wrap > #header { width: 100%; height: 40px; padding-top: 10px; background-color: rgba(102, 0, 41, 0.5); position: fixed; top: 0; left: 0; z-index: 500; }
+#wrap > #article { width: 100%; background-color: #595959; }
+#wrap > #aside, #wrap > #content2 { width: 100%; background-color: #b3b3b3; }
+#wrap > #content { width: 100%; background-color: #666666; }
+#wrap > #content2 { background-color: #0af; }
+#wrap > #footer { width: 100%; height: 100px; background-color: #DDDDDD; }
+
+#header > h1 { width: 100px; height: 30px; float: left; background-color: #FFFFFF; text-align: center; line-height: 30px; }
+#header > h1 > a { color: #333333; font-size: 1.2rem; }
+#header > ul { width: 600px; height: 30px; float: right; background-color: #FFFFFF; }
+#header > ul li { width: calc((100% - 4px) / 5); height: 100%; border-right: 1px solid #FF0066; float: left; text-align: center; line-height: 30px; list-style: none; }
+#header > ul li:last-child { border-right: 0; }
+#header > ul li a { color: #595959; text-decoration: none; transition: all 0.5s ease; }
+#header > ul li a:hover { text-decoration: underline; font-weight: bold; font-size: 1.1rem; color: #FF0066; }
+
+#article form { width: 400px; height: auto; border: 1px solid #FF0066; border-color: #FFFFFF; margin: 0 auto; }
+#article form > fieldset { width: 100%; height: 100%; border: 0; }
+#article form > fieldset > legend { width: 0; height: 0; overflow: hidden; }
+#article form > fieldset > input { width: 100%; height: 30px; margin-left: 10%; background-color: #cff; }
+#article form > fieldset > input[type="button"] { font-weight: bold; height: 50px; background-color: #ccc; }
+#article form > fieldset > input[type="button"]:hover { background-color: #0af; }
+#article > form > fieldset > input { margin-left: 0; }
+
+#aside form, #wrap > #content2 form { width: 400px; height: auto; border: 1px solid #FF0066; border-color: #FFFFFF; margin: 0 auto; }
+#aside form > fieldset, #wrap > #content2 form > fieldset { width: 100%; height: 100%; border: 0; }
+#aside form > fieldset > legend, #wrap > #content2 form > fieldset > legend { width: 0; height: 0; overflow: hidden; }
+#aside form > fieldset > input, #wrap > #content2 form > fieldset > input { width: 50%; height: 40px; margin-left: 10%; background-color: #FFFFFF; }
+#aside form > fieldset > input[type="button"], #wrap > #content2 form > fieldset > input[type="button"] { font-weight: bold; height: 50px; background-color: #FF0066; }
+#aside form > fieldset > input[type="button"]:hover, #wrap > #content2 form > fieldset > input[type="button"]:hover { background-color: #0af; }
+
+/*# sourceMappingURL=scss_01.css.map */
