@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #container {
   width: 960px;
   height: auto;
@@ -102,5 +103,85 @@
     content: "";
     display: block;
     clear: both; }
+#content #plus {
+  width: 70%;
+  height: 300px;
+  background-color: #acf;
+  padding-left: 50px;
+  position: absolute;
+  right: -70%;
+  bottom: 100px;
+  z-index: 300;
+  top: 1000px;
+  transition: all 1s ease-in; }
+  #content #plus .charactor {
+    width: 100px;
+    height: 120%;
+    border-radius: 100%;
+    background-color: #fa0;
+    margin-left: -100px;
+    margin-top: -30px;
+    float: left;
+    box-shadow: 2px 2px 2px #07f;
+    margin-right: 40px; }
+  #content #plus h2 {
+    width: 70%;
+    height: 30px;
+    float: left;
+    background: #fcf;
+    padding-top: 20px; }
+  #content #plus p {
+    width: 70%;
+    height: 80%;
+    margin-top: 5px;
+    float: left;
+    background: #fff;
+    overflow: hidden; }
+
+#bannerBox > h2 {
+  animation: music 5s linear 5 alternate; }
+#bannerBox > h2:hover {
+  animation-play-state: paused; }
+#bannerBox > div {
+  animation: music 20s linear; }
+
+@keyframes music {
+  20% {
+    transform: translateX(-30px) rotate(15deg); }
+  30% {
+    transform: translateX(-60px) rotate(0); }
+  40% {
+    transform: translateX(-90px) rotate(15deg); }
+  50% {
+    transform: translateX(-120px) rotate(0); }
+  60% {
+    transform: translateX(-150px) rotate(15deg); }
+  80% {
+    opacity: 0; } }
+/*
+ * transition-property:속성;
+ * transition-duration:시간;
+ * transition-timing-function:속도;
+ * transition-delay:지연시간;
+ *  _________________________________________________________________________
+ * animation-name:이름;  => sass 이름만들기(mixin)와 유사 : @keyframes와 연결
+ * animation-duration:시간;
+ * animation-timing-function:속도;
+ * animation-delay:지연시간;
+ * animation-iteration-count:반복(infinite);
+ * animation-play-state:paused | running ;
+ * animation-fill-mode:반복의 방향;
+ * animation-direction:animation이 끝났을때 위치하는 곳;
+ * 
+ * animation:이름 시간 속도 반복 지연시간 .....;
+ * _________________________________________________________________________
+ * @keyframes 이름{
+ * 	0%{}
+ * 	25%{}
+ * 	35%{}
+ *  100%{}
+ * }
+ * 
+ */
 
 /*# sourceMappingURL=layout_test.css.map */
