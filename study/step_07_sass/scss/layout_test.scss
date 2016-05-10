@@ -3,6 +3,7 @@ $white: #fff;
 $black: #333;
 $logo_line: 5px solid #aaa;
 //html,body{height: 100%;}
+body{overflow-x: hidden;}
 #container{width: 960px; height: auto; margin: 0 auto; padding-top:60px;}
 #headBox{width: 100%; height: 60px;  position: fixed; z-index: 500;
 	top: 0; left: 0; background-color: #acc;}
@@ -49,9 +50,10 @@ $logo_line: 5px solid #aaa;
 		}// li
 		&::after{content:""; display: block; clear: both;}
 	}
-	#plus{width:70%; height: 300px; background-color: #acf; padding-left: 50px;
+	#plus{width:70%; height: 300px; /*background-color: #acf;*/ padding-left: 50px;
 			position: absolute; right:-70%; bottom:100px; z-index: 300; top:1000px;
 			transition:all 1s ease-in;
+		&.inSlide{right:0;}
 		// &:hover{right:0;}
 		.charactor{width:100px; height:120%; border-radius:100%; background-color: #fa0;
 			margin-left: -100px; margin-top: -30px; float: left;box-shadow:2px 2px 2px #07f; margin-right: 40px;}

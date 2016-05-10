@@ -11,7 +11,9 @@
 	<title>Document</title>
 	<script>
 		$(document).ready(function(){
-			
+			$(".charactor").on("click",function(){
+					$("#plus").toggleClass("inSlide");
+				})
 		});
 	</script>
 </head>
@@ -45,10 +47,12 @@
 			</ul>
 			<div id="plus">
 				<div class="charactor"></div>
+<!--
 				<h2>title~~~</h2>
 				<p>
 					내용을 담는 곳!!!
 				</p>
+-->
 			</div>
 		</article>
 		<footer id="footBox"></footer>
