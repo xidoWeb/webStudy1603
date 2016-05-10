@@ -1,0 +1,91 @@
+#container {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 60px; }
+
+#headBox {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  background-color: #acc; }
+
+#bannerBox {
+  width: 100%;
+  height: 450px;
+  background-color: #aaa;
+  padding-top: 50px; }
+
+#content {
+  width: 100%;
+  height: auto;
+  background-color: #ca7;
+  padding: 10px 0; }
+
+#footBox {
+  width: 100%;
+  height: 100px;
+  background-color: #aaa; }
+
+#headBox > h1 {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 10px;
+  margin-left: calc(50% - 450px);
+  background-color: #fff;
+  border: 5px solid #aaa;
+  box-sizing: border-box; }
+#headBox > #gnb {
+  width: 600px;
+  height: 30px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 20%; }
+  #headBox > #gnb > ul {
+    width: 100%;
+    height: 100%; }
+    #headBox > #gnb > ul > li {
+      width: calc(100% / 4);
+      height: 100%;
+      line-height: 1.875rem;
+      text-align: center;
+      float: left; }
+    #headBox > #gnb > ul > li > a {
+      line-height: inherit;
+      color: #fff;
+      transition: all 0.5s ease-in-out; }
+      #headBox > #gnb > ul > li > a:hover {
+        font-size: 1.3em; }
+
+#bannerBox > h2 {
+  width: 200px;
+  height: 50px;
+  padding: 30px;
+  margin: 50px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold; }
+#bannerBox > div {
+  width: 150px;
+  height: 40px;
+  border: 5px solid #aaa;
+  border-color: #fff;
+  margin: 10px auto; }
+  #bannerBox > div > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #fff;
+    transition: all 0.5s ease; }
+    #bannerBox > div > a:hover {
+      background-color: #fff;
+      color: #333; }
+
+/*# sourceMappingURL=layout_test.css.map */
