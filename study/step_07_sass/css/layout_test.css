@@ -62,7 +62,7 @@
         font-size: 1.3em; }
 
 #bannerBox > h2 {
-  width: 200px;
+  width: 250px;
   height: 50px;
   padding: 30px;
   margin: 50px auto;
@@ -71,7 +71,7 @@
   font-size: 1.7rem;
   font-weight: bold; }
 #bannerBox > div {
-  width: 150px;
+  width: 200px;
   height: 40px;
   border: 5px solid #aaa;
   border-color: #fff;
@@ -87,5 +87,20 @@
     #bannerBox > div > a:hover {
       background-color: #fff;
       color: #333; }
+
+#content > ul {
+  width: 100%;
+  height: auto; }
+  #content > ul > li {
+    width: 50%;
+    height: 450px;
+    border: 1px solid #fa0;
+    box-sizing: border-box;
+    background-color: #fff;
+    float: left; }
+  #content > ul::after {
+    content: "";
+    display: block;
+    clear: both; }
 
 /*# sourceMappingURL=layout_test.css.map */
