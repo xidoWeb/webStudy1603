@@ -1,0 +1,55 @@
+@import "./lib/base";
+
+// rwd_01.scss
+
+// mobile_v
+@media screen and (max-width:480px) {
+	body{}
+	.container{width: 100%; height: auto; background-color: #aaa;}
+	#headBox{width: 100%; height: auto; padding-top: 20px;
+		>h1{width:100px; height: 30px; background-color:#fff;
+			margin-left:calc(50% - 50px); margin-bottom: 20px;} 
+		>#gnb{width: 86%; height: 300px; margin-left: 7%;
+			background-color: #fff; margin-bottom: 20px;}
+	}//#headBox
+	
+	#content{width: 100%; height:500px; background-color: #acc;}// #content
+}
+
+// mobile_h
+@media screen and (min-width:481px) and (max-width:640px){
+	body{background-color:#fa0;}	
+	.container{width: 100%; height: auto; background-color: #aaa;}
+	#headBox{width: 100%; height: auto; padding-top: 20px;
+		>h1{width:100px; height: 30px; background-color:#fff;
+			margin-left:calc(50% - 50px); margin-bottom: 20px;} 
+		>#gnb{width: 86%; height: 300px; margin-left: 7%;
+			background-color: #fff; margin-bottom: 20px;}
+	}//#headBox
+	
+	#content{width: 100%; height:500px; background-color: #acc;}// #content
+}
+
+// tablet_v
+@media screen and (min-width:641px) and (max-width:768px){
+	body{background-color:#ac0;}
+}
+
+// tablet_h
+@media screen and (min-width:769px) and (max-width:1024px){
+	body{background-color:#0cf;}
+}
+
+// pc
+@media screen and (min-width:1025px) {
+	body{background-color:#a0f;}
+}
+
+
+
+
+
+
+
+
+
