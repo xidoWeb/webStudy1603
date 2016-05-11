@@ -1,3 +1,6 @@
+* {
+  transition: all 0.5s; }
+
 @media screen and (max-width: 480px) {
   .container {
     width: 100%;
@@ -21,6 +24,9 @@
       background-color: #fff;
       margin-bottom: 20px; }
 
+  #ad {
+    display: none; }
+
   #content {
     width: 100%;
     height: 500px;
@@ -42,27 +48,146 @@
       width: 100px;
       height: 30px;
       background-color: #fff;
-      margin-left: calc(50% - 50px);
+      margin-left: 7%;
       margin-bottom: 20px; }
     #headBox > #gnb {
       width: 86%;
-      height: 300px;
+      height: 62.5vw;
+      /* 300/480*100 */
       margin-left: 7%;
       background-color: #fff;
       margin-bottom: 20px; }
+
+  #ad {
+    display: none; }
 
   #content {
     width: 100%;
     height: 500px;
     background-color: #acc; } }
 @media screen and (min-width: 641px) and (max-width: 768px) {
-  body {
-    background-color: #ac0; } }
+  .container {
+    width: 100%;
+    height: auto; }
+
+  #headBox {
+    width: 90%;
+    height: auto;
+    padding: 10px 5%;
+    background-color: #aaf; }
+    #headBox > h1 {
+      width: 80px;
+      height: 40px;
+      background-color: #fff;
+      float: left; }
+    #headBox > #gnb {
+      width: 400px;
+      height: 40px;
+      background-color: #fff;
+      float: right; }
+    #headBox::after {
+      content: "";
+      display: block;
+      clear: both; }
+
+  #ad {
+    width: 100%;
+    height: 40vw;
+    /* 400/641*100 */
+    background-color: #fa0; }
+    #ad .tip_box {
+      display: none; }
+
+  #content {
+    width: 100%;
+    height: 500px;
+    background-color: #acc; } }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  body {
-    background-color: #0cf; } }
+  #headBox {
+    width: 90%;
+    height: auto;
+    padding: 10px 5%;
+    background-color: #aaf; }
+    #headBox > h1 {
+      width: 80px;
+      height: 40px;
+      background-color: #fff;
+      float: left; }
+    #headBox > #gnb {
+      width: 400px;
+      height: 40px;
+      background-color: #fff;
+      float: right; }
+    #headBox::after {
+      content: "";
+      display: block;
+      clear: both; }
+
+  #ad {
+    width: 100%;
+    height: 40vw;
+    background-color: #fa0;
+    position: relative; }
+    #ad .tip_box {
+      width: 20%;
+      height: 8vw;
+      /* 60/770*100 */
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 5%; }
+
+  #content {
+    width: 100%;
+    height: 500px;
+    background-color: #acc; } }
 @media screen and (min-width: 1025px) {
-  body {
-    background-color: #a0f; } }
+  #headBox {
+    width: 90%;
+    height: auto;
+    padding: 10px 5%;
+    background-color: #aaf; }
+    #headBox > h1 {
+      width: 80px;
+      height: 40px;
+      background-color: #fff;
+      float: left; }
+    #headBox > #gnb {
+      width: 400px;
+      height: 40px;
+      background-color: #fff;
+      float: right; }
+    #headBox::after {
+      content: "";
+      display: block;
+      clear: both; }
+
+  #pcAd {
+    width: 100%;
+    height: 40vw;
+    background-color: #f76;
+    text-align: center;
+    line-height: 40vw;
+    font-size: 10vw;
+    font-weight: bold;
+    color: #fff; }
+
+  #ad {
+    width: 100%;
+    height: 40vw;
+    background-color: #5af;
+    position: relative; }
+    #ad .tip_box {
+      width: 20%;
+      height: 5vw;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 5%; }
+
+  #content {
+    width: 100%;
+    height: 500px;
+    background-color: #acc; } }
 
 /*# sourceMappingURL=rwd_01.css.map */
