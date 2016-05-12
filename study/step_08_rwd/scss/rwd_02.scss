@@ -1,0 +1,16 @@
+/* rwd_02.scss */
+
+/* mobile_v*/
+@media screen and (max-width:480px){}
+
+/* mobile_h*/
+@media screen and (min-width:481px) and (max-width:640px){}
+
+/* tablet_v*/
+@media screen and (min-width:641px) and (max-width:768px){}
+
+/* tablet_h*/
+@media screen and (min-width:769px) and (max-width:1024px){}
+
+/* pcfull*/
+@media screen and (min-width:1025px){}

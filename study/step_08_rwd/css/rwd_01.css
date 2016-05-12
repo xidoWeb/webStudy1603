@@ -1,6 +1,9 @@
 * {
   transition: all 0.5s; }
 
+#pcAd {
+  display: none; }
+
 @media screen and (max-width: 480px) {
   .container {
     width: 100%;
@@ -139,7 +142,9 @@
 
   #content {
     width: 100%;
+    max-width: 960px;
     height: 500px;
+    margin: 0 auto;
     background-color: #acc; } }
 @media screen and (min-width: 1025px) {
   #headBox {
@@ -170,7 +175,8 @@
     line-height: 40vw;
     font-size: 10vw;
     font-weight: bold;
-    color: #fff; }
+    color: #fff;
+    display: block; }
 
   #ad {
     width: 100%;
@@ -186,8 +192,9 @@
       left: 5%; }
 
   #content {
-    width: 100%;
+    width: 960px;
     height: 500px;
-    background-color: #acc; } }
+    background-color: #acc;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=rwd_01.css.map */
