@@ -1,0 +1,14 @@
+// _rwd_02_pc.scss
+
+/* pcfull*/
+@media screen and (min-width:1025px){
+	body,html{height: 100%;}
+	#container{height: 100%;}
+	#headBox{position: fixed; top: 0; left: 0; z-index: 500; 
+		background-color:rgba($main, 0.5);}
+	#banner{width: 100%; height: 100%; background-color: $sub4; display: block;}
+	#lnb{width: 30%; position:absolute; left:10px; top:150px;}
+	#content{width: 60%; position:absolute; right:10px;  top:150px;}
+	#slideBanner{width: 100%; height: 400px; display: block; background-color: #567;}
+	#footBox{}
+}// pcfull
