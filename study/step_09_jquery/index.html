@@ -9,10 +9,13 @@
 	<script src="js/jquery/jquery-migrate-1.3.0.min.js"></script>
 	<script src="js/jquery/jquery-ui.min.js"></script>
 	<title>Document</title>
-	<style></style>
+	<style>
+		body{color:#fa0}
+		
+	</style>
 	<script>
 		$(function(){
-			var box, test, i, k, pas, textBox;
+			/* var box, test, i, k, pas, textBox;
 					box = null;
 					test = 'aaaa';			
 					i = "10";
@@ -24,7 +27,11 @@
 			console.log(i + k); //  105
 			console.log(pas+5); //110
 			
-			var arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+			var arr = [
+				'tttp://naver.com',
+				'http://daum.net',
+				'thhp://google.com'
+			];
 			var arr2 = ['도형', '미나', '민아', '수정', '예빈', '상희'];
 			
 			console.log( arr[2] );
@@ -39,13 +46,59 @@
 			console.log( con );
 			con.pop();
 			console.log( con );
+			// ---------------------------------------------------------
+			var obj = {};
+			var arr = [];
+			obj = {'도형':'강사', 
+						 '미나':'사랑', 
+						 '민아':'고수', 
+						 '수정':'보석', 
+						 '예빈':'원데이', 
+						 '상희':'라이언'
+						};
+			console.log( obj.수정 );
+			obj.수정 = '사파이어';
+			console.log( obj.수정 );
+			console.log( obj ); */
+			
+//			함수
+//			function(){}
+			
+			var fn = function(i, j){  // 인자, 파라미터, 아규먼트
+				var box = 'test';
+				var	num = 100 + i;
+				console.log(box + num + j);
+			};
+//			fn(100, "추가!!!");
+//			fn(800,"또다른");
+//			fn(200,"세번째");
+//			fn(200,"내용");
+//			fn(200,"변경");
+//			fn(200,"체크");
+			 fn(1,1);
+		//	console.log( fn(1,1) );
+		//	console.log(num);
+			
+			function fn2(i){
+				var box = 5;
+				var sum = box + i;
+				return sum;
+			};
+			
+			console.log( fn2(100) * 100 );
 			
 			
+			
+			// 즉시실행함수: IIFE
+			(function(){
+				$('body').css({'background-color':'#faf'});
+			})();
 			
 		});
 	</script>
 </head>
 <body>
+	
 	<script>
 		(function($){
 		})(this.jQuery)
