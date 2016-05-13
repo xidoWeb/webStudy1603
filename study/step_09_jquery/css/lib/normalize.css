@@ -1,0 +1,99 @@
+/* @import url("./reset.css");
+ * @import url("./common.css");
+ * 
+ * ---------------------------------------------------------------------------------------------------------------------
+ * normalize.css
+ * id는 camelcase 방식(뒤에오는 단어 첫글자 대문자)으로 하며, 
+ * class는 underscore 방식(단어구분_)으로 사용한다.
+ * 초기화 문서의 경우 reset.css로 별도 등록( @import url("./reset.css"); ) 한다.
+ * 기본 반복 사용하는 형식의경우 common.css로 별도 등록( @import url("./common.css"); )하며, 
+ * 개인의 경우 앞에 " me_ "를 붙여구분이 용이하도록 하여 사용한다.
+ * id는 문서 내 한 번만 사용되며, id, class naming은 가급적 같지 않게 naming 한다.(form영역에서는 구분이 용이하도록 맞춘다.) 
+ * 별도의 네이밍 기법은 다음의 표준을 따른다. ( http://darum.daum.net/convention/name )
+ * ---------------------------------------------------------------------------------------------------------------------
+ * 색상표기방법: webRGB 기법으로 처리, 투명도 처리시 RGBA()기법으로 처리하여 통일성을 지킨다.
+ * 기본 글씨색: #333
+ * 링크: #777 => hover: #0af
+ * focus: outline: 1px solid #fa0; box-sizing:border-box; background-color:#cdf;
+ * input[type="text"]일 경우 text-indent:5px; (0.0625rem)을 처리한다.
+ * 
+ ------ 접근성기준 ---------------------
+ * 4.5:1 이상일경우는 기본폰트 12pt(1rem)으로 하되, 
+ * 3:1일경우에는 18pt(1.5rem) or 14pt bold(1.16667rem), 
+ * 최소폰트 9pt(0.75rem)을 처리한다.
+ * 
+ ------ ir기법 적용시 -------------------
+ * 숨길텍스트 사용시 span으로 숨김 처리하며, 
+ * width:0; height:0; display:block; overflow:hidden;으로 처리한다.
+ * 
+ ------ is기법 적용시 -------------------
+ * background-position을 기본적으로 세로형으로 맞춰 사용한다.(상황에 따라 조금씩 다른형태로 사용)
+ * 마우스:hover시에는 별도의 파일로 (끝에_on을 적용)사용하여 코드의 작성을 줄인다.
+ *
+ ------ float 버그 문제시 ---------------
+ * 1. 감싸는 부모태그에 .clearfix를 적용시켜 float 버그를 처리한다.
+ * 2. 마지막단에 <br /> 태그를 사용하여 .clearfix 처리한다.
+ * 
+ --- double margin 문제시 ---
+ * margin-top사용시 부모태그와 함께 내려오는 문제를 해결하기위해선
+ * 부모태그를 padding-top으로 처리한다.
+ * ---------------------------------------------------------------------------------------------------------------------
+ */
+
+/* reset.css: 문서 초기화 */
+*, h1,h2,h3,h4,h5,h6, p, blockque, figcaption, div, form, fieldset{
+	margin: 0; padding: 0; border: 0; color:#333; vertical-align: top;
+	font-size:100%; line-height:1.2em;
+	font-family:"myriad pro", arial, nanumGothic, dotum, sans-serif;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none; color:#777;}
+a:hover, a:active{text-decoration: underline; color:#0af;}
+hr{border-bottom:1px solid #333;}/* 내용을 구분지을때만 사용할것*/
+address{font-style:normal;}
+table, tr, td, th, thead, tbody, tfoot{border:1px solid #777; border-spacing: 0; border-collapse:collapse;}
+/* 디자인적용시
+ * th{background-color:#cdf;}
+ * table, tr, td, th, thead, tbody, tfoot{border-left:0; border-right:0;}
+ * table{border-top:2px; border-bottom:2px;}
+ */
+
+/* html5: 추가된 내용에 따른 인식초기화: 일부 html5에 없는 태그명도 있음 */
+header, article, section, aside,  footer, nav, main, banner, hgroup{ display: block;}
+
+/* formSetting: 접근성 및 인식의 용이성에 따른 내용처리 */
+a:focus, 
+button:focus, 
+select:focus, 
+textarea:focus, 
+input:focus,
+*[tabindex]:focus{ outline:2px solid #fa0; outline-offset:2px; }
+
+input[type="text"], 
+input[type="password"], 
+input[type="search"], 
+input[type="url"], 
+input[type="email"], 
+input[type="tel"]{	border:1px solid #777; text-indent:0.0625em;box-sizing:border-box; }
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="search"]:focus, 
+input[type="url"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus{background-color:#cdf;}
+
+textarea{border:1px solid #777; box-sizing:border-box;}
+button{cursor: pointer; }
+
+/* common.css: 별도의 ir/is기법 사용시 편의성을 위해 별도의 제작된 css */
+
+.pc960, #wrap, .container{width: 960px; height: auto; margin: 0 auto; }
+.me_link a{width: 100%; height: 100%; display: block; background-repeat:no-repeat;}
+.me_hidden, legend, a>span, legend>span, h2, h3, h4, h5, h6{width: 0; height: 0; display: block; overflow: hidden;}
+.clearfix::before, .clearfix::after{content:""; display: block; clear: both;}
+.me_left-clear{margin-left: 0; padding-left: 0; border-left: 0;}
+.me_right-clear{margin-right: 0; padding-right: 0; border-right: 0;}
+.me_line-bar>li{border-right:1px solid #fff; padding:0 5px; float: left;}
+.me_line-bar>li:first-child{padding-left: 0;}
+.me_line-bar>li:last-child{padding-right: 0;border-right:0;}
+.me_help{cursor: help;}

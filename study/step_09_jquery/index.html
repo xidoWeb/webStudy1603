@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/lib/reset.css" />
+	<script src="js/jquery/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery/jquery-migrate-1.3.0.min.js"></script>
+	<script src="js/jquery/jquery-ui.min.js"></script>
+	<title>Document</title>
+	<style></style>
+	<script>
+		$(function(){
+			var box, test, i, k, pas, textBox;
+					box = null;
+					test = 'aaaa';			
+					i = "10";
+					k = 5;
+					textBox="문자";
+					pas = parseInt( i + textBox + k); 
+				//	pas = i + k + textBox;  // parseInt  정수로 변환
+			
+			console.log(i + k); //  105
+			console.log(pas+5); //110
+			
+			var arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+			var arr2 = ['도형', '미나', '민아', '수정', '예빈', '상희'];
+			
+			console.log( arr[2] );
+			console.log( arr2[5] );
+			
+			var arr3 =['윤혜', '승엽'];
+			var str = "이어붙이기";
+			var str2 = str.concat("내용");
+			var con = arr2.concat(arr3);
+			
+			console.log( str2 );
+			console.log( con );
+			con.pop();
+			console.log( con );
+			
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<script>
+		(function($){
+		})(this.jQuery)
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
