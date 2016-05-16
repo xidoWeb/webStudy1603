@@ -19,9 +19,22 @@
 /*		#header>h1:hover + ul{display: block;}*/
 		.box:hover > ul{height:40rem;}
 		#header ul>li{text-align: center; line-height: 10rem; border-bottom:1px solid;}
-		#gnb{width:100%; height:50px; background-color:#5f7;}
+		
+		#gnb{width:100%; height:50px; background-color:#5f7; position: relative;}
+		#gnb>h2{width: 50px; height: 50px; overflow:visible; float: left; margin-left: 10px;
+			cursor: pointer;}
+		#gnb>h2>i{font-size:3rem; color:#fff;}
+		#gnb>h2>span{width: 0; height: 0; display: block; overflow: hidden;}
+		#gnb>ul{width: 20vw; height: auto;
+			position: absolute; top: 0; left: 65px; z-index: 100;}
+		#gnb>ul>li{width: 50%; height: 3vw; background-color: #faa; border: 2px solid  #ccc;
+			box-sizing:border-box; transition:box-shadow 1s; text-align: center; line-height: 3vw;}
+		#gnb>ul>li>a{font-size: 1.2em; color:#fff; font-weight: bold;}
+		#gnb>ul>li:hover{box-shadow:2px 2px 2px #333 inset; }
+		
 		#content{width:100%; height:400px; background-color:#fa8;}
 		#footer{width:100%; height:200px; background-color:#aaa;}
+		
 	</style>
 	<script>
 		$(function(){
@@ -32,7 +45,19 @@
 									 'background-color':'#ca7'})
 				 .children('a').css({'color': '#fff', 'font-weight':'bold','display':'block','text-align':'center','line-height':$h_height});
 			
-		});
+			var gnav = $('.g_navi'),
+					gnb_h2 = $('#gnb').children('h2');
+			
+			// show | hide | toggle
+			// fadeIn | fadeOut | fadeToggle
+			// slideDown | slideUp | slideToggle
+			gnav.hide();
+			gnb_h2.on('click', function(){
+				gnav.stop().slideToggle(700);
+				});
+			
+			});//jquery end
+		
 	</script>
 </head>
 <body>
@@ -50,6 +75,18 @@
 		</div>
 		<div id="gnb">
 			<h2><i class="fa fa-bars"></i><span>메뉴만들기2</span></h2>
+			<ul class="g_navi">
+				<li><a href="#">link_01</a></li>
+				<li><a href="#">link_02</a></li>
+				<li><a href="#">link_03</a></li>
+				<li><a href="#">link_04</a></li>
+				<li><a href="#">link_05</a></li>
+				<li><a href="#">link_06</a></li>
+				<li><a href="#">link_07</a></li>
+				<li><a href="#">link_08</a></li>
+				<li><a href="#">link_09</a></li>
+				<li><a href="#">link_10</a></li>
+			</ul>
 		</div>
 		<div id="content"></div>
 		<div id="footer"></div>
