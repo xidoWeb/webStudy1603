@@ -27,7 +27,7 @@
 		#gnb>h2>span{width: 0; height: 0; display: block; overflow: hidden;}
 		#gnb>ul{width: 20vw; height: auto;
 			position: absolute; top: 0; left: 65px; z-index: 100;}
-		#gnb>ul>li{width: 50%; height: 3vw; background-color: #faa; border: 2px solid  #ccc;
+		#gnb>ul>li{width: 50%; height: 3vw; background-color: #faa; border: 2px solid  #ccc; float: left;
 			box-sizing:border-box; transition:box-shadow 1s; text-align: center; line-height: 3vw;}
 		#gnb>ul>li>a{font-size: 1.2em; color:#fff; font-weight: bold;}
 		#gnb>ul>li:hover{box-shadow:2px 2px 2px #333 inset; }
@@ -55,9 +55,21 @@
 			gnb_h2.on('click', function(){
 				gnav.stop().slideToggle(700);
 				});
-			
-			});//jquery end
 		
+		var gnb = $('#gnb');
+		gnb.css({'width': '60px', 'height':'60px', 'float':'right', 'margin':'5px',
+						 	'background-color':'#f06'}).appendTo('#header');
+			
+			// .append() | .appendTo()
+			/* gnb.append(box) : gnb 내부 뒤에 box를 담다.
+			 * gnb.appendTo(box) : box 내부 뒤에 gnb를 담다.
+			 */
+			// .prepend() | .prependTo()
+			/* gnb.prepend(box) : gnb 내부 앞에 box를 담다.
+			 * gnb.prependTo(box) : box 내부 앞에 gnb를 담다.
+			 */
+		
+			});//jquery end
 	</script>
 </head>
 <body>
