@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: black;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		@keyframes sf-fly-by-1 {
+			from {
+				transform: translateZ(0px);
+				opacity: 0.85;
+			}
+			to {
+				transform: translateZ(600px);
+				opacity: 1.13333;
+			}
+		}
+		@keyframes sf-fly-by-2 {
+			from {
+				transform: translateZ(-600px);
+				opacity: 0.7;
+			}
+			to {
+				transform: translateZ(0px);
+				opacity: 0.93333;
+			}
+		}
+		@keyframes sf-fly-by-3 {
+			from {
+				transform: translateZ(-1200px);
+				opacity: 0.55;
+			}
+			to {
+				transform: translateZ(-600px);
+				opacity: 0.73333;
+			}
+		}
+		@keyframes sf-fly-by-4 {
+			from {
+				transform: translateZ(-1800px);
+				opacity: 0.4;
+			}
+			to {
+				transform: translateZ(-1200px);
+				opacity: 0.53333;
+			}
+		}
+		@keyframes sf-fly-by-5 {
+			from {
+				transform: translateZ(-2400px);
+				opacity: 0.25;
+			}
+			to {
+				transform: translateZ(-1800px);
+				opacity: 0.33333;
+			}
+		}
+		@keyframes sf-fly-by-6 {
+			from {
+				transform: translateZ(-3000px);
+				opacity: 0.1;
+			}
+			to {
+				transform: translateZ(-2400px);
+				opacity: 0.13333;
+			}
+		}
+		.star-field {
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
+			perspective: 600px;
+		}
+		.star-field .layer {
+			box-shadow: 898px 532px #cfcfcf, -69px 183px #f2f2f2, -388px -110px #fafafa, 725px -80px #dedede, -826px 326px #dedede, 482px -28px #d4d4d4, 783px 159px #c2c2c2, 712px -535px #d9d9d9, 754px 167px #fcfcfc, 3px 304px #cfcfcf, -487px 188px #f2f2f2, -913px -279px #cfcfcf, -729px -439px #c9c9c9, -146px 482px #d9d9d9, 604px 187px #e6e6e6, 778px 71px #d4d4d4, -457px 341px #d9d9d9, 391px 231px #f7f7f7, 227px 219px #ebebeb, -111px -320px #e8e8e8, 676px 478px white, -951px 362px #dbdbdb, -390px -342px #d4d4d4, -894px 53px #dbdbdb, 956px 21px #cccccc, -229px 435px #cfcfcf, -301px 324px #c2c2c2, 155px 185px #fafafa, 63px -308px #e6e6e6, 414px -211px #c4c4c4, 944px -501px #f7f7f7, 788px 525px #c2c2c2, 836px -34px #d1d1d1, 778px -402px #f2f2f2, -802px 30px #c4c4c4, -522px 420px #d1d1d1, -933px -192px #d6d6d6, 376px -366px #fcfcfc, -89px 309px #d9d9d9, 356px -225px white, 857px -208px #e3e3e3, -823px -67px #d6d6d6, 626px 309px #c7c7c7, 682px -333px #e3e3e3, -512px -405px #ebebeb, 441px -273px #f2f2f2, -706px 118px #cfcfcf, -535px -476px #cfcfcf, 104px -348px #ededed, -545px -385px #f7f7f7, 556px 489px #fafafa, -792px -328px #e3e3e3, 879px 486px #fafafa, -719px 125px #e0e0e0, 400px -258px #e8e8e8, 449px 353px #ededed, 142px 489px #c4c4c4, -500px -144px #f0f0f0, 634px 59px #f0f0f0, 318px 307px white, -76px -388px #d6d6d6, -137px -379px whitesmoke, -456px -101px #e3e3e3, -405px 119px #fcfcfc, -854px -372px #d6d6d6, 202px -400px #d4d4d4, -14px 294px #d4d4d4, 43px -445px #f2f2f2, -680px -413px #e0e0e0, 825px -248px #d1d1d1, 662px -260px #fcfcfc, -600px -63px #fafafa, -121px 279px #d4d4d4, -780px -398px #d6d6d6, 786px 314px #fafafa, -749px -466px #d1d1d1, -864px 190px white, 200px 369px #ebebeb, -660px 187px #d4d4d4, 233px 378px #c4c4c4, 55px -216px #d9d9d9, 762px -5px #c9c9c9, -545px -368px #e3e3e3, -463px 414px #f2f2f2, 423px 182px #cccccc, 813px 488px #d9d9d9, -142px -479px #fcfcfc, 765px 364px #ededed, -806px 137px #ebebeb, -931px -73px #cccccc, 25px 185px #f2f2f2, 941px 371px #fcfcfc, -693px 173px #e8e8e8, -575px 364px #dedede, -444px -162px #ebebeb, 445px 265px #e0e0e0, 266px -397px #dbdbdb, 384px -371px #c9c9c9, 947px 375px #c7c7c7, 510px 230px #d6d6d6, 827px -135px #f0f0f0;
+			transform-style: preserve-3d;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 4px;
+			width: 4px;
+			border-radius: 2px;
+		}
+		.star-field .layer:nth-child(1) {
+			animation: sf-fly-by-1 30s linear infinite;
+		}
+		.star-field .layer:nth-child(2) {
+			animation: sf-fly-by-2 30s linear infinite;
+		}
+		.star-field .layer:nth-child(3) {
+			animation: sf-fly-by-3 30s linear infinite;
+		}
+		.star-field .layer:nth-child(4) {
+			animation: sf-fly-by-4 30s linear infinite;
+		}
+		.star-field .layer:nth-child(5) {
+			animation: sf-fly-by-5 30s linear infinite;
+		}
+		.star-field .layer:nth-child(6) {
+			animation: sf-fly-by-6 30s linear infinite;
+		}
+	</style>
+</head>
+<body>
+	<div class="star-field">
+		<div class="layer"></div>
+		<div class="layer"></div>
+		<div class="layer"></div>
+		<div class="layer"></div>
+		<div class="layer"></div>
+		<div class="layer"></div>
+	</div>
+</body>
+</html>
