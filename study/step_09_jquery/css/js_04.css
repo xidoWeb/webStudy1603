@@ -12,10 +12,12 @@
 	font-weight: bold; color:#fff;cursor: pointer;
 	border-bottom: 1px solid #fff; transition: all 0.3s;}
 .menu>dl>dt:hover{background-color: #f3c;}	 
-.menu>dl>dd{width: 100%; height: 10rem; padding-top: 0.6rem; 
+.menu>dl>dd{width: 100%; height: 0; padding-top: 0.6rem; 
 	background-color: #dfdfdf; 
-
-	display:none;}
+	overflow: hidden; transition:height 0.5s;
+	/*&.dd_height{}*/
+	}
+.menu   .dd_height{height: 10rem;}
 /* dt:hover + dd{display: block;} */
 
 

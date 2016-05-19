@@ -11,9 +11,15 @@
 
 	<script>
 		$(document).ready(function(){
-			$('.menu dt').on('click', function(){
-					$(this).next('dd').slideToggle(500)
-								 .delay(500).animate({'background-color':'#faa'});
+			var menu = $('.menu');
+					
+			menu.find('dt').on('click', function(){
+				var $this = $(this);
+					// menu.find('dd').stop().slideUp(500);
+					// $this.next('dd').stop().slideToggle(500)
+					// 		 .animate({'background-color':'#fff'},500);
+				$this.next('dd').toggleClass('dd_height');
+
 			});
 
 				
@@ -22,8 +28,10 @@
 			// show | hide | toggle
 			// fadeIn | fadeOut | fadeToggle
 			// slideDown | slideUp | slideToggle
+			// addClass  | removeClass  | toggleClass   | hasClass
 
-		})
+
+		});
 	</script>
 </head>
 <body>
