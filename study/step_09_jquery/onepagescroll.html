@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery.ui.min.js"></script> -->
+	<script src="./onepage.js"></script>
+	<style>
+	*{margin: 0; padding: 0; border: 0;}
+	body{height: 3000px;}	
+	p{position:fixed; top:100px; width:150px; height:30px; 
+		border-bottom: 1px solid  #555; color:#777;}
+	.offset{left:100px;}
+	.scrollTop{left:400px;}
+	p>span{background-color: #fcfcfc; padding:5px; margin-left: 5px;}
+	button{width: 1rem; height: 1rem; 
+		border-radius:0.6rem;  z-index: 500;
+		position: fixed; top: 50%; left: 50%;
+		margin-top:-0.5rem; margin-left:-0.5rem;
+		cursor: pointer; transition:all 0.5s;
+		animation:arr 2s infinite ease alternate;
+		}
+	button:hover{background-color:#0af;
+		animation-play-state:paused;}
+
+	@keyframes arr{
+		0%{transform:translateY(0);}
+		100%{transform:translateY(-30px) scale(3);}
+	}
+	</style>
+
+</head>
+<body>
+	<p class="offset">offset: <span></span></p>
+
+	<p class="scrollTop">scrollTop: <span></span></p>
+	<button>↑ top</button>
+</body>
+</html>
