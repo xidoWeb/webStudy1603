@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0; border: 0;}
+html,body{height: 100%;position: relative;}
+#header{width:100%; height: 2.5rem; padding: 10px 0; 
+	background-color: #7a7;
+	position: absolute; bottom:0; left: 0;}
+#article{width: 100%; height: 100%; background-color:#fac;}
+#section{width: 100%; height: 100%; background-color:#a7f;}
+#footer{width: 100%; height: 100%; background-color:#07f;}
+
+#header.scroll{position:fixed; top:0; left: 0; z-index: 1000;}
