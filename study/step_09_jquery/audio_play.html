@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="./css/lib/normalize.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="js/jquery/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery/jquery-migrate-1.3.0.min.js"></script>
+	<script src="js/jquery/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<title>Document</title>
+	<style>
+		.multi{padding: 10px 0; height: auto;}
+		.multi>li{height: 40px; padding:5px 10px;}
+		.multi>li>button{width: 100px; height: 100%;}
+		.multi>li>marquee{width:100%; height: 100%; background-color: #fff; line-height: 30px;}
+		.list_box{margin-top: 15px;}
+		.list_box li{padding: 10px 0; text-align: center;transition: all 0.5s; cursor: pointer;}
+		.list_box li:hover{background-color: #acc; color:#333; font-weight: bold;}
+		.au_btn{width: 100px; height: 30px; position: relative;display:inline-block;}
+		.btn_a{top: 0; left: 0; width: 100%; height: 100%; position: absolute; }
+		.play{z-index:100;}
+		/*.stop{z-index:0;}*/
+		.stop_plus{z-index: 200;}
+	</style> 
+	</head>
+<body>
+	<div class="container-fluid bg-info">
+		<ul class="row multi">
+			<li class="col-md-3 col-lg-2 bg-info"></li>
+			<li class="col-md-3 col-lg-4 btn-primary">
+        <button type="button" class="btn btn-success prev">prev</button>
+
+        <div class="au_btn">
+        	<button type="button" class="btn btn_a btn-warning play">play</button>
+        	<button type="button" class="btn btn_a btn-danger stop">stop</button>
+        </div>
+
+        <button type="button" class="btn btn-success next">next</button>
+			</li>
+			
+			<li class="col-md-3 col-lg-4 bg-primary">
+				<marquee direction="left">왼쪽으로 움직임</marquee> 
+			</li>
+			<li class="col-md-3 col-lg-2 bg-info"></li>
+		</ul>
+	</div>
+	<div class="container">
+		<ul class="row list_box">
+			<li class="col-md-3 col-lg-3 bg-primary" data-audio="Crystallize">Crystallize</li>
+			<li class="col-md-3 col-lg-3 bg-primary" data-audio="MasterofTides">MasterofTides</li>
+			<li class="col-md-3 col-lg-3 bg-primary" data-audio="RoundtableRival">RoundtableRival</li>
+			<li class="col-md-3 col-lg-3 bg-primary" data-audio="Shadows">Shadows</li>
+		</ul>
+	</div>
+	<div class="container multi_audio">
+		<audio controls="controls" class="mu1">
+			<source src="./multi/Crystallize.mp3" type="audio/mp3">
+		</audio>
+	</div>
+	<script>
+				(function($){
+					var prev = $('.prev'),
+                play = $('.play'),
+                stop = $('.stop'),
+                next = $('.next'),
+                au = $('audio')[0],
+                list_box = $('.list_box').children('li');
+                
+                multi_audio = $('.multi_audio').find('audio');
+           play.on('click', function(){
+		           au.play();
+		           stop.addClass('stop_plus');
+           });
+           stop.on('click', function(){
+	           	au.pause();
+		           stop.removeClass('stop_plus');
+           });
+           list_box.on('click', function(){
+           	var music_btn = $(this).attr('data-audio');
+           		$('audio').attr('src', "./multi/"+music_btn+".mp3");
+           		$('marquee').text(music_btn);
+           })
+				})(this.jQuery);
+			</script>
+</html>
