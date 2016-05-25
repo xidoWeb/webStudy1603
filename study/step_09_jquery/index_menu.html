@@ -38,18 +38,21 @@
 // 아코디언 가로형 만들기
 
 
-	var acc_btn =	$('.accodion_width').find('dt');
+	var acc = $('.accodion_width'),
+			acc_btn =	acc.find('dl');
 
-		 acc_btn.on('mouseenter', function(){
+		 acc_btn.on('click', function(){
 		 	var $this = $(this);
-		 	$this.siblings().animate({'width':610 + 'px'});
+		 		acc.find('dd').removeClass('widthView');
+		 		$this.find('dd').addClass('widthView');
 
-		 }).on('mouseleave', function(){
-		 	var $this = $(this),
-		 			order_dd = $this.parents('dl').children('dd');
-				 	order_dd.animate({'width':0 + 'px'});		
-		 })
+		 		//if(){}else{};
+		 	//	() ? : ;
+		 		
+		 		
 
+		 });
+		
 		});
 	</script>
 </head>

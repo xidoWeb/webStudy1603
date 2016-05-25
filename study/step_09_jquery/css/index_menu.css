@@ -43,7 +43,8 @@
 .accodion_width>div>dl>dt{width:70px; height: 100%; float:left;color:#fff;
 		background-color:rgba(0,0,0,0.3); text-align: center; font-size: 0.7rem;}
 .accodion_width>div>dl>dd{/* width:calc(100% - 70px); */width:0; overflow: hidden;
-		height: 100%; float:left; text-align: center; font-size: 0.7rem; }
-/*.accodion_width>div>dl>dd.widthView{width: 610px;}*/
+		height: 100%; float:left; text-align: center; font-size: 0.7rem; 
+		transition:all 0.3s;}
+.accodion_width>div>dl>dd.widthView{width: 610px;}
 
 /*.accodion_width>div>dl>dt:hover + dd{width:610px;}*/
