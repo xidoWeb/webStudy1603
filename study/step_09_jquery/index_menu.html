@@ -35,6 +35,21 @@
   				// return false;
   				   
 			});
+// 아코디언 가로형 만들기
+
+
+	var acc_btn =	$('.accodion_width').find('dt');
+
+		 acc_btn.on('mouseenter', function(){
+		 	var $this = $(this);
+		 	$this.siblings().animate({'width':610 + 'px'});
+
+		 }).on('mouseleave', function(){
+		 	var $this = $(this),
+		 			order_dd = $this.parents('dl').children('dd');
+				 	order_dd.animate({'width':0 + 'px'});		
+		 })
+
 		});
 	</script>
 </head>
@@ -59,6 +74,40 @@
 				<li>box_05</li>
 			</ul>
 		</section>
+
+		<article class="accodion_width">
+			<div class="acc_01">
+				<dl>
+					<dt>acc_title</dt>
+					<dd class="widthView">
+						acc_content</dd>
+				</dl>
+			</div>
+			<div class="acc_02">
+				<dl>
+					<dt>acc_title</dt>
+					<dd>acc_content</dd>
+				</dl>
+			</div>
+			<div class="acc_03">
+				<dl>
+					<dt>acc_title</dt>
+					<dd>acc_content</dd>
+				</dl>
+			</div>
+			<div class="acc_04">
+				<dl>
+					<dt>acc_title</dt>
+					<dd>acc_content</dd>
+				</dl>
+			</div>
+			<div class="acc_05">
+				<dl>
+					<dt>acc_title</dt>
+					<dd>acc_content</dd>
+				</dl>
+			</div>
+		</article>
 	</div>
 </body>
 </html>

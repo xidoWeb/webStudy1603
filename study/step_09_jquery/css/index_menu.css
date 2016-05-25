@@ -24,4 +24,26 @@
 /*event color*/
 .addColor{background-color:#f06 !important; 
 			color:#fff !important; transition:all 0.7s;}
-.boxWidth{width:60% !important; background-color:#f06 !important;  }
+.boxWidth{width:60% !important; background-color:#f06 !important;}
+
+/* accodion_width */
+.accodion_width{width: 60rem; height: 500px; 
+	border-bottom:3px solid #999; margin: 0 auto; 
+	margin-top: 50px;}
+.accodion_width>div{width:auto; height: 100%; float: left;	
+				text-align: center;line-height: 500px; color:#fff;
+				font-weight: bold; font-size: 1.5em;}
+.acc_01{background-color:#f91;}
+.acc_02{background-color:#f73;}
+.acc_03{background-color:#f55;}
+.acc_04{background-color:#f37;}
+.acc_05{background-color:#f19;}
+
+.accodion_width>div>dl{width: 100%; height: 100%;}
+.accodion_width>div>dl>dt{width:70px; height: 100%; float:left;color:#fff;
+		background-color:rgba(0,0,0,0.3); text-align: center; font-size: 0.7rem;}
+.accodion_width>div>dl>dd{/* width:calc(100% - 70px); */width:0; overflow: hidden;
+		height: 100%; float:left; text-align: center; font-size: 0.7rem; }
+/*.accodion_width>div>dl>dd.widthView{width: 610px;}*/
+
+/*.accodion_width>div>dl>dt:hover + dd{width:610px;}*/
