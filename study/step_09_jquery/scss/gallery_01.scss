@@ -1,0 +1,33 @@
+/* gallery_01.scss */
+.container{
+	#header{width: 100vw; height:4.375rem;/* 70px */ background-color: #0ac;
+			position: relative; left: 50%; margin-left: -50vw; 
+		>h1{width: 100%; height: 100%;
+				text-align: center; line-height:4.375rem; font-size: 2rem; color:#fff;}
+	}// #header
+	#gallery{width: 100%; height: 500px; background-color: #fdfdfd; padding-top: 50px;
+		>.box{width: 80%; height: auto; margin-left: 10%; border: 3px solid  #0ac;
+			box-sizing:border-box; margin-bottom: 10px;}
+		>ul{width: 80%; height: 50px; padding: 10px 10%; border-top: 1px solid  #777;
+			>li{width: 10%; height: 100%; float:left; border-right: 1px solid  #0ac;
+					box-sizing:border-box;
+					&:last-child{border-right:0;}
+				>a{width: 100%; height: 100%; display: block; background-position: center;
+					background-repeat: no-repeat; text-align: center; line-height: 50px; 
+					transition:all 0.3s;
+					&:hover{background-color: #0af; color:#fff; }
+					}// a
+				&:nth-child(1)>a{}
+				&:nth-child(2)>a{}
+				&:nth-child(3)>a{}
+				&:nth-child(4)>a{}
+				&:nth-child(5)>a{}
+				&:nth-child(6)>a{}
+				&:nth-child(7)>a{}
+				&:nth-child(8)>a{}
+				&:nth-child(9)>a{}
+				&:nth-child(10)>a{}
+			}// li
+		}// ul
+	}// #gallery
+	}// .container
