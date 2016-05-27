@@ -58,7 +58,7 @@ function gallery(){
 	// 이미지 클릭
 	gallerybtn.on('click', function(e){
 		e.preventDefault();
-
+			
 		var imgspan = imgbox.find('div'),
 				data_img = $(this).attr("data-img"),
 				a_nar = $(this).text();

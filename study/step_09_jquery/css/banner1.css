@@ -1,0 +1,11 @@
+html, body { width: 100%; height: 3000px; overflow-x: hidden; }
+
+.container { background-color: #acc; width: 100%; max-width: 960px; height: auto; margin: 0 auto; position: relative; }
+
+#headBox { width: 100vw; height: 3rem; padding-top: 2rem; position: absolute; left: calc(50% - 50vw); background-color: #f0c; box-shadow: 0 0.3rem 0.3rem #777; }
+#headBox > h1 { width: 30vw; height: auto; margin: 0 auto; text-align: center; line-height: 3rem; color: #fff; font-size: 1.5rem; font-weight: bold; }
+
+#content { width: 80%; min-width: 600px; min-width: 37.5rem; height: auto; padding-top: 6rem; margin: 0 auto; padding-bottom: 1rem; }
+#content .banner { width: 100%; height: 25rem; border: 2px solid  #aff; box-sizing: border-box; }
+
+/*# sourceMappingURL=banner1.css.map */
