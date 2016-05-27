@@ -4,7 +4,7 @@ function slideBanner(banner){
 	var b_box = banner,
 			b_box_ul = b_box.find('ul'),
 			b_box_li = b_box.find('li'),
-			b_box_li_width = b_box.find('li').width();
+			b_box_li_width = b_box.find('li').width(),
 			l_btn = $('.btn_left'),
 			r_btn = $('.btn_right');
 
