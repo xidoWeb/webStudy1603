@@ -1,24 +1,31 @@
 /* gallery_01.scss */
-.container #header { width: 100vw; height: 4.375rem; /* 70px */ background-color: #0ac; position: relative; left: 50%; margin-left: -50vw; }
+.container #header { width: 100vw; height: 4.375rem; /* 70px */ background-color: #0af; position: relative; left: 50%; margin-left: -50vw; }
 .container #header > h1 { width: 100%; height: 100%; text-align: center; line-height: 4.375rem; font-size: 2rem; color: #fff; }
-.container #gallery { width: 100%; height: 500px; background-color: #dff; padding-top: 50px; }
-.container #gallery > .box { width: 80%; height: auto; max-height: 500px; margin-left: 10%; border: 3px solid  #0ac; box-sizing: border-box; margin-bottom: 10px; overflow: hidden; position: relative; }
-.container #gallery > .box span { width: calc(100% - 20px); height: 80px; display: block; position: absolute; bottom: -100px; background-color: rgba(0, 0, 0, 0.7); padding: 10px; color: #fff; }
-.container #gallery > .box span.spanbox { bottom: 0 !important; transition: all 0.5s; }
-.container #gallery > ul { width: 80%; height: 50px; padding: 10px 10%; border-top: 1px solid  #777; }
-.container #gallery > ul > li { width: 10%; height: 100%; float: left; border-right: 1px solid  #0ac; box-sizing: border-box; }
-.container #gallery > ul > li:last-child { border-right: 0; }
-.container #gallery > ul > li > a { width: 100%; height: 100%; display: block; background-position: center; background-repeat: no-repeat; text-align: center; line-height: 50px; transition: all 0.3s; font-size: 0; background-size: 100%; }
-.container #gallery > ul > li > a:hover { color: #fff; background-size: 150%; }
-.container #gallery > ul > li:nth-child(1) > a { background-image: url("../img/j01.jpg"); }
-.container #gallery > ul > li:nth-child(2) > a { background-image: url("../img/j02.jpg"); }
-.container #gallery > ul > li:nth-child(3) > a { background-image: url("../img/j03.jpg"); }
-.container #gallery > ul > li:nth-child(4) > a { background-image: url("../img/j04.jpg"); }
-.container #gallery > ul > li:nth-child(5) > a { background-image: url("../img/j05.jpg"); }
-.container #gallery > ul > li:nth-child(6) > a { background-image: url("../img/j06.jpg"); }
-.container #gallery > ul > li:nth-child(7) > a { background-image: url("../img/j07.jpg"); }
-.container #gallery > ul > li:nth-child(8) > a { background-image: url("../img/j08.jpg"); }
-.container #gallery > ul > li:nth-child(9) > a { background-image: url("../img/j09.jpg"); }
-.container #gallery > ul > li:nth-child(10) > a { background-image: url("../img/j10.jpg"); }
+.container #gallery { width: 100%; height: auto; background-color: #dff; padding-top: 3rem; padding-bottom: 1rem; }
+.container #gallery > .box { width: 80%; height: auto; max-height: 500px; border-radius: 1rem; margin-left: 10%; border: 3px solid #0af; box-sizing: border-box; margin-bottom: 10px; overflow: hidden; position: relative; }
+.container #gallery > .box div { width: calc(100% - 20px); height: 60px; display: block; position: absolute; bottom: -100px; background-color: rgba(0, 0, 0, 0.7); padding: 20px; color: #fff; }
+.container #gallery > .box div > h5 { overflow: visible; width: auto; height: auto; font-size: 1.2em; color: #fff; margin-bottom: .5rem; }
+.container #gallery > .box div > p { color: #cccccc; }
+.container #gallery > .thumnail { width: 80%; height: 50px; padding: 10px 10%; position: relative; }
+.container #gallery > .thumnail > .gall_btn { width: 5%; height: inherit; position: absolute; top: 20px; }
+.container #gallery > .thumnail > .gall_btn > button { width: 100%; height: 100%; background-color: transparent; color: #0af; font-size: 3rem; }
+.container #gallery > .thumnail > .gall_btn.gallery_btn_left { margin-left: 5%; left: 0; }
+.container #gallery > .thumnail > .gall_btn.gallery_btn_right { margin-right: 5%; right: 0; }
+.container #gallery > .thumnail > .thumbox { width: calc(100% - 20px); height: inherit; border-top: 1px solid  #777; padding: 10px; }
+.container #gallery > .thumnail > .thumbox > ul { width: 100%; height: inherit; /* padding: 10px 10%;  */ }
+.container #gallery > .thumnail > .thumbox > ul > li { width: 20%; height: 100%; float: left; border-right: 2px solid transparent; box-sizing: border-box; }
+.container #gallery > .thumnail > .thumbox > ul > li:first-child { border-left: 2px solid transparent; }
+.container #gallery > .thumnail > .thumbox > ul > li > a { width: 100%; height: 100%; display: block; background-position: center; background-repeat: no-repeat; text-align: center; line-height: 50px; transition: all 0.3s; font-size: 0; background-size: 100%; }
+.container #gallery > .thumnail > .thumbox > ul > li > a:hover { color: #fff; background-size: 150%; }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(1) > a { background-image: url("../img/j01.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(2) > a { background-image: url("../img/j02.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(3) > a { background-image: url("../img/j03.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(4) > a { background-image: url("../img/j04.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(5) > a { background-image: url("../img/j05.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(6) > a { background-image: url("../img/j06.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(7) > a { background-image: url("../img/j07.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(8) > a { background-image: url("../img/j08.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(9) > a { background-image: url("../img/j09.jpg"); }
+.container #gallery > .thumnail > .thumbox > ul > li:nth-child(10) > a { background-image: url("../img/j10.jpg"); }
 
 /*# sourceMappingURL=gallery_01.css.map */
