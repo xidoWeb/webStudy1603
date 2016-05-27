@@ -9,20 +9,23 @@ function gallery(){
 	// 이미지 설명넣기위한 상자만들기
 	imgbox.append('<div>');
 
-// 	// 좌/우 버튼 클릭
-// var gal_btn    = $('gall_btn'),
-// 		gal_left	= $('gallery_btn_left'),
-// 		gal_right	= $('gallery_btn_right');
-// 		thum_box_li = $('.thumbox').find('li');
-// 		thum_box_li_w = thum_box_li.width();
-// 		thum_box_li_set = thum_box_li.length;
-// 		thum_box_w = parseInt(thum_box_li_w * thum_box_li_set );
+	// 좌/우 버튼 클릭
+var gal_btn    = $('gall_btn'),
+		gal_left	= $('gallery_btn_left'),
+		gal_right	= $('gallery_btn_right'),
+		thum_box = $('.thumbox'),
+		thum_box_ul = thum_box.children('ul'),
+		thum_box_li = thum_box_ul.find('li'),
+		thum_box_li_w = thum_box_li.width(thum_box.width() / 10),
+		thum_box_li_set = thum_box_li.length,
+		thum_box_w = parseInt(thum_box_li_w * thum_box_li_set );
 
-// 		console.log(thum_box_li_w);
-// 		console.log(thum_box_w);
-// 		gal_btn.on('click', function(){
+		console.log(thum_box_li_w);
+		console.log(thum_box_w);
+		thum_box_ul.width(thum_box_w);
+		gal_btn.on('click', function(){
 
-// 		});
+		});
 
 
 	// 이미지 클릭
