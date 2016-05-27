@@ -16,9 +16,33 @@ html, body{width: 100%; height: 3000px; overflow-x:hidden;}
 		height: auto; padding-top:6rem; margin: 0 auto; padding-bottom: 1rem;
 	.banner{
 		width: 100%; height: 25rem; border: 2px solid  #aff; box-sizing:border-box;
+		position: relative;
 		}// .banner
 	}// #content
 
 // 버튼
+.banner_btn{width: 2rem; height: 100%; position: absolute; top: 0;
+		z-index:100;
+	&.btn_left{left: -2rem;}
+	&.btn_right{right: -2rem;}
+	>button{width: 100%; height: 100%; transition:all 0.5s;
+		font-weight: bold; font-size: 1.5rem; background-color:transparent;}
+	&:hover >button{background-color:#fff;}
+}// .banner_btn
+
 
 // 배너 디자인 
+.banner_box{width: 100%; height: 100%; /* overflow: hidden; */
+	>ul{width:500%; height: 100%; margin-left:-100%;
+		>li{width:calc(100% / 5); height:100%; float:left; 
+				text-align:center; line-height:25rem; font-size:3rem; color:#fff;
+				transition:all 0.7s;
+			&.ban_1{background-color:#05f;}
+			&.ban_2{background-color:#55f;}
+			&.ban_3{background-color:#95f;}
+			&.ban_4{background-color:#a5f;}
+			&.ban_5{background-color:#f5f;}
+			&:hover{font-size:5rem;}
+		}// li
+	}// ul
+}// .banner_box
