@@ -24,6 +24,9 @@
 		/*.stop{z-index:0;}*/
 		.stop_plus{z-index: 200;}
 	</style> 
+	<script>
+	
+	</script>
 	</head>
 <body>
 	<div class="container-fluid bg-info">
@@ -55,33 +58,91 @@
 		</ul>
 	</div>
 	<div class="container multi_audio">
-		<audio controls="controls" class="mu1">
-			<source src="./multi/Crystallize.mp3" type="audio/mp3">
+		<audio controls="controls" class="mu1" id="myaudio">
+			<!-- <source id="main" src="./multi/Crystallize.mp3" type="audio/mp3"> -->
+			<!-- <source > -->
+			<!-- <source src="./multi/MasterofTides.mp3" type="audio/mp3">
+			<source src="./multi/RoundtableRival.mp3" type="audio/mp3">
+			<source src="./multi/Shadows.mp3" type="audio/mp3"> -->
+			<p>재생이 되지 않는 브라우저 입니다. 최신 브라우저 및 크롬브라우저를  사용해주세요.</p>
 		</audio>
 	</div>
+
 	<script>
-				(function($){
-					var prev = $('.prev'),
-                play = $('.play'),
-                stop = $('.stop'),
-                next = $('.next'),
-                au = $('audio')[0],
-                list_box = $('.list_box').children('li');
-                
-                multi_audio = $('.multi_audio').find('audio');
-           play.on('click', function(){
-		           au.play();
-		           stop.addClass('stop_plus');
-           });
-           stop.on('click', function(){
-	           	au.pause();
-		           stop.removeClass('stop_plus');
-           });
-           list_box.on('click', function(){
-           	var music_btn = $(this).attr('data-audio');
-           		$('audio').attr('src', "./multi/"+music_btn+".mp3");
-           		$('marquee').text(music_btn);
-           })
-				})(this.jQuery);
-			</script>
+	(function($){
+		var index = 0;
+		// play list ----------------------------------------------------------------------------------
+		var music_list = ['Crystallize.mp3', 'MasterofTides.mp3', 'RoundtableRival.mp3', 'Shadows.mp3'];
+
+		// 기본 재생곡명 ----------------------------------------------------------------------------------
+		var nthPlay = './multi/'+music_list[index];
+			$('#myaudio').attr('src', nthPlay);  
+			$('marquee').text(music_list[index]);
+
+		var prev = $('.prev'),
+        play = $('.play'),
+        stop = $('.stop'),
+        next = $('.next'),
+        au = $('#myaudio')[0],
+        list_box = $('.list_box').children('li'),
+        multi_audio = $('.multi_audio').find('audio');
+
+     var playing = function(){
+     if( au.play() ) {stop.addClass('stop_plus');} 
+     else {stop.removeClass('stop_plus');}
+   }
+      
+
+		// play btn ----------------------------------------------------------------------------------
+	   play.on('click', function(){
+	       au.play();
+	       stop.addClass('stop_plus');
+	       // playing();
+	   });
+	   stop.on('click', function(){
+	     	au.pause();
+	       stop.removeClass('stop_plus');
+	       // playing();
+	   });
+
+	   list_box.on('click', function(){
+	   	var music_btn = $(this).attr('data-audio');
+	   	var m_btn = $(this).index();
+
+	   		$('#myaudio').attr('src', "./multi/"+music_list[m_btn] );
+	   		$('marquee').text(music_btn);
+	   		playing();
+	   })
+  	// prev btn ----------------------------------------------------------------------------------
+	  	$('.prev').click(function() {
+					index--;
+					if(index < 0) index=music_list.length-1;
+					console.log( index+1 + '번째 소스 재생' );
+					// var nth_list = $('#myaudio source:nth-child('+index+')' ;
+					var nthPlay = './multi/'+music_list[index];
+					$('#myaudio').attr('src', nthPlay); //.attr('src'));
+					// $("#myaudio")[0].load();
+					$("#myaudio")[0].load();
+					$("#myaudio")[0].play();
+					$('marquee').text(music_list[index]);
+					playing();
+				});
+	  
+	  //	next btn ---------------------------------------------------------------------------------
+   		$('.next').click(function() {
+				index++;
+				if(index > music_list.length-1) index=0;
+				console.log( index+1 + '번째 소스 재생' );
+				// var nth_list = $('#myaudio source:nth-child('+index+')' ;
+				var nthPlay = './multi/'+music_list[index];
+				$('#myaudio').attr('src', nthPlay); //.attr('src'));
+				// $("#myaudio")[0].load();
+				$("#myaudio")[0].load();
+				$("#myaudio")[0].play();
+				$('marquee').text(music_list[index]);
+				playing();
+			});
+
+	})(this.jQuery);
+	</script>
 </html>
