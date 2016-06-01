@@ -1,0 +1,21 @@
+/* indi.css */
+.container{width: 960px; height: auto; background-color: #ddd; margin:0 auto;}
+#headBox{width: calc(100% - 40px); height: 80px; padding: 20px; background-color: #faf;}
+#headBox>h1{width: 100%; height: 40px; font-size: 2rem; color:#fff; float: left;}
+#content{width: 100%; height: 450px; background-color: #ccc; 
+		position: relative; overflow-x: hidden;}
+#content>.indi{width: 200px; height: 15px; position: absolute; z-index: 100; 
+							top: 10px; left: 50%; margin-left: -100px;}
+#content>.indi>li{width: 15px; height: 15px; float: left; margin-right: 20px; 
+		background-color: #fff; border-radius:50%;}
+#content>.indi>li:last-child{margin-right: 0;}
+#content>.indi>li>a{width: 100%; height: 100%; display: block; 
+		text-align: center; line-height: 15px;}
+
+#content>.bannerBox{width: 500%; height: 100%;}
+#content>.bannerBox>li{width:20%; height: 100%; float: left;}
+#content>.bannerBox>li:nth-child(1){background-color:#567;}
+#content>.bannerBox>li:nth-child(2){background-color:#863;}
+#content>.bannerBox>li:nth-child(3){background-color:#259;}
+#content>.bannerBox>li:nth-child(4){background-color:#015;}
+#content>.bannerBox>li:nth-child(5){background-color:#a61;}
