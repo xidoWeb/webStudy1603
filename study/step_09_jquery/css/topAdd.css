@@ -1,0 +1,14 @@
+/* topAdd.css */
+
+#topAdd{width: 60vw; height: 3rem; 
+	background-color: #999; padding:1rem 20vw; 
+	position: relative;}
+#topAdd>p{width: 80%; height:1.5rem; 
+	line-height: 1.5rem; color:#fff; font-size:1.3rem; float:left;}
+#topAdd>.addbox{width: 80%; height: 1.5rem; 
+						float:left;}
+#topAdd>.addbox>a{color:#faa;}
+#topAdd>button{width: 10%; height: 100%; 
+					float: right; color:#555; 
+					font-weight: bold;font-size: 4rem;
+					position: absolute; top: 0; right: 20vw;}

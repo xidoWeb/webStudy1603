@@ -1,0 +1,59 @@
+// gallery_02.scss
+
+.container{width: 960px; height: auto; margin: 0 auto;}
+#headBox{width:100%; height:auto; padding-top:20px; background-color:#acc;
+	h1{width: 80%; height: 3rem; text-align: center; line-height: 3rem;
+		color:#fff;}
+}// #headBox
+
+#content{width:100%; height:auto; padding:20px 0; background-color:#ccf;
+	// 갤러리 팝업 상자
+	.popup1{width: 100%; height: 100%; background-color:rgba(#333, 0.5);
+				position:fixed; z-index: 500; top: 0; left: 0;
+				display: none;
+		.popupBox{width: 60%; height:auto; background-color: #fff;
+					border: 3px solid #7fa; position: absolute; 
+					left: 20%; top:15%; border-radius:10px; box-sizing:border-box;
+					box-shadow: 3px 3px 3px #333;  overflow: hidden;
+			>img{width: 100%; height: auto;}
+					}// .popupBox
+		.close{width:3rem; height: 3rem; background-color: #333; color:#fff;
+					border:3px solid #fff; box-sizing:border-box;
+					font-weight: bold; position: absolute; right: calc(20% - 1.5rem); 
+					top: calc(15% - 1.5rem); z-index:700; border-radius:50%; 
+					font-size: 2rem; transition:all 0.5s;
+					box-shadow:2px 2px 2px #333;
+					&:hover{transform:rotate(45deg);}
+				}// .close
+	}// .popup1
+
+	// 갤러리 섬네일 이미지
+	>ul{width: 80%; height:auto; border:5px solid #fcc; box-sizing:border-box;
+			margin-left: 10%; background-color: #fff;
+			&:after{content:""; display: block; clear:both;}
+		>li{width: 25%; height:4rem; background-color:#fff; float: left;
+				border: 1px solid #ccc; box-sizing:border-box;
+				>a{width: 100%; height: 100%; display: block; 
+				}// a
+			}// li
+		}// ul
+	}// #content
+
+.popup_btn{
+	>li>a{background-repeat:no-repeat; background-position:center;
+			transition:all 0.5s; background-size:100%;
+	 &:hover{background-size:130%;} 
+	 }// a
+	>li:nth-child(1)>a{background-image:url("../img/j01.jpg");}
+	>li:nth-child(2)>a{background-image:url("../img/j02.jpg");}
+	>li:nth-child(3)>a{background-image:url("../img/j03.jpg");}
+	>li:nth-child(4)>a{background-image:url("../img/j04.jpg");}
+	>li:nth-child(5)>a{background-image:url("../img/j05.jpg");}
+	>li:nth-child(6)>a{background-image:url("../img/j06.jpg");}
+	>li:nth-child(7)>a{background-image:url("../img/j07.jpg");}
+	>li:nth-child(8)>a{background-image:url("../img/j08.jpg");}
+	>li:nth-child(9)>a{background-image:url("../img/j09.jpg");}
+	>li:nth-child(10)>a{background-image:url("../img/j10.jpg");}
+	>li:nth-child(11)>a{background-image:url("../img/j11.jpg");}
+	>li:nth-child(12)>a{background-image:url("../img/j12.jpg");}
+}

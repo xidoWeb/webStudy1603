@@ -1,0 +1,120 @@
+.container {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+
+#headBox {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  background-color: #acc; }
+  #headBox h1 {
+    width: 80%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    color: #fff; }
+
+#content {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background-color: #ccf; }
+  #content .popup1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    display: none; }
+    #content .popup1 .popupBox {
+      width: 60%;
+      height: auto;
+      background-color: #fff;
+      border: 3px solid #7fa;
+      position: absolute;
+      left: 20%;
+      top: 15%;
+      border-radius: 10px;
+      box-sizing: border-box;
+      box-shadow: 3px 3px 3px #333;
+      overflow: hidden; }
+      #content .popup1 .popupBox > img {
+        width: 100%;
+        height: auto; }
+    #content .popup1 .close {
+      width: 3rem;
+      height: 3rem;
+      background-color: #333;
+      color: #fff;
+      border: 3px solid #fff;
+      box-sizing: border-box;
+      font-weight: bold;
+      position: absolute;
+      right: calc(20% - 1.5rem);
+      top: calc(15% - 1.5rem);
+      z-index: 700;
+      border-radius: 50%;
+      font-size: 2rem;
+      transition: all 0.5s;
+      box-shadow: 2px 2px 2px #333; }
+      #content .popup1 .close:hover {
+        transform: rotate(45deg); }
+  #content > ul {
+    width: 80%;
+    height: auto;
+    border: 5px solid #fcc;
+    box-sizing: border-box;
+    margin-left: 10%;
+    background-color: #fff; }
+    #content > ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+    #content > ul > li {
+      width: 25%;
+      height: 4rem;
+      background-color: #fff;
+      float: left;
+      border: 1px solid #ccc;
+      box-sizing: border-box; }
+      #content > ul > li > a {
+        width: 100%;
+        height: 100%;
+        display: block; }
+
+.popup_btn > li > a {
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s;
+  background-size: 100%; }
+  .popup_btn > li > a:hover {
+    background-size: 130%; }
+.popup_btn > li:nth-child(1) > a {
+  background-image: url("../img/j01.jpg"); }
+.popup_btn > li:nth-child(2) > a {
+  background-image: url("../img/j02.jpg"); }
+.popup_btn > li:nth-child(3) > a {
+  background-image: url("../img/j03.jpg"); }
+.popup_btn > li:nth-child(4) > a {
+  background-image: url("../img/j04.jpg"); }
+.popup_btn > li:nth-child(5) > a {
+  background-image: url("../img/j05.jpg"); }
+.popup_btn > li:nth-child(6) > a {
+  background-image: url("../img/j06.jpg"); }
+.popup_btn > li:nth-child(7) > a {
+  background-image: url("../img/j07.jpg"); }
+.popup_btn > li:nth-child(8) > a {
+  background-image: url("../img/j08.jpg"); }
+.popup_btn > li:nth-child(9) > a {
+  background-image: url("../img/j09.jpg"); }
+.popup_btn > li:nth-child(10) > a {
+  background-image: url("../img/j10.jpg"); }
+.popup_btn > li:nth-child(11) > a {
+  background-image: url("../img/j11.jpg"); }
+.popup_btn > li:nth-child(12) > a {
+  background-image: url("../img/j12.jpg"); }
+
+/*# sourceMappingURL=gallery_02.css.map */

@@ -51,19 +51,11 @@
 	</div>
 	<div class="container">
 		<ul class="row list_box">
-			<li class="col-md-3 col-lg-3 bg-primary" data-audio="Crystallize">Crystallize</li>
-			<li class="col-md-3 col-lg-3 bg-primary" data-audio="MasterofTides">MasterofTides</li>
-			<li class="col-md-3 col-lg-3 bg-primary" data-audio="RoundtableRival">RoundtableRival</li>
-			<li class="col-md-3 col-lg-3 bg-primary" data-audio="Shadows">Shadows</li>
 		</ul>
 	</div>
 	<div class="container multi_audio">
 		<audio controls="controls" class="mu1" id="myaudio">
-			<!-- <source id="main" src="./multi/Crystallize.mp3" type="audio/mp3"> -->
-			<!-- <source > -->
-			<!-- <source src="./multi/MasterofTides.mp3" type="audio/mp3">
-			<source src="./multi/RoundtableRival.mp3" type="audio/mp3">
-			<source src="./multi/Shadows.mp3" type="audio/mp3"> -->
+		
 			<p>재생이 되지 않는 브라우저 입니다. 최신 브라우저 및 크롬브라우저를  사용해주세요.</p>
 		</audio>
 	</div>
@@ -72,8 +64,26 @@
 	(function($){
 		var index = 0;
 		// play list ----------------------------------------------------------------------------------
-		var music_list = ['Crystallize.mp3', 'MasterofTides.mp3', 'RoundtableRival.mp3', 'Shadows.mp3'];
+		var music_list = [
+					'Crystallize.mp3', 
+					'MasterofTides.mp3', 
+					'RoundtableRival.mp3', 
+					'Shadows.mp3',
+					'MV I.O.I(아이오아이)Dream Girls(드림걸스).mp3',
+          '세로라이브 어반자카파 -널 사랑하지 않아.mp3',
+          '어반자카파(Urban Zakapa)-둘 하나 둘 MV.mp3',
+          '제시 쎈언니 (Jessi SSENUNNI) MV.mp3',
+          'AOA - 단발머리 (Short Hair) MV.mp3'
+					];
 
+    for(var i=0; i < music_list.length; i++ ){
+      $('.list_box').append('<li>')
+                    .find('li')
+                    .eq(i)
+                    .text(music_list[i])
+                    .addClass('col-md-4 col-lg-4 bg-primary');
+      }
+    
 		// 기본 재생곡명 ----------------------------------------------------------------------------------
 		var nthPlay = './multi/'+music_list[index];
 			$('#myaudio').attr('src', nthPlay);  
@@ -83,14 +93,13 @@
         play = $('.play'),
         stop = $('.stop'),
         next = $('.next'),
-        au = $('#myaudio')[0],
+        au = $('audio')[0],
         list_box = $('.list_box').children('li'),
         multi_audio = $('.multi_audio').find('audio');
 
-     var playing = function(){
-     if( au.play() ) {stop.addClass('stop_plus');} 
-     else {stop.removeClass('stop_plus');}
-   }
+    var playing = function(){
+     ( au.play() ) ? stop.addClass('stop_plus'); : stop.removeClass('stop_plus');
+    }
       
 
 		// play btn ----------------------------------------------------------------------------------
@@ -106,17 +115,18 @@
 	   });
 
 	   list_box.on('click', function(){
-	   	var music_btn = $(this).attr('data-audio');
+	   	var music_btn = $(this).text();
 	   	var m_btn = $(this).index();
 
 	   		$('#myaudio').attr('src', "./multi/"+music_list[m_btn] );
 	   		$('marquee').text(music_btn);
 	   		playing();
-	   })
+	   });
+     
   	// prev btn ----------------------------------------------------------------------------------
-	  	$('.prev').click(function() {
+	  	prev.click(function() {
 					index--;
-					if(index < 0) index=music_list.length-1;
+					if(index < 0) {index=music_list.length-1;}
 					console.log( index+1 + '번째 소스 재생' );
 					// var nth_list = $('#myaudio source:nth-child('+index+')' ;
 					var nthPlay = './multi/'+music_list[index];
@@ -129,9 +139,9 @@
 				});
 	  
 	  //	next btn ---------------------------------------------------------------------------------
-   		$('.next').click(function() {
+   		next.click(function() {
 				index++;
-				if(index > music_list.length-1) index=0;
+				if(index > music_list.length-1) {index=0;}
 				console.log( index+1 + '번째 소스 재생' );
 				// var nth_list = $('#myaudio source:nth-child('+index+')' ;
 				var nthPlay = './multi/'+music_list[index];
@@ -145,4 +155,5 @@
 
 	})(this.jQuery);
 	</script>
+  </body>
 </html>
