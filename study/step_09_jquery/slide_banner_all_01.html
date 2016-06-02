@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  <link rel="stylesheet" href="./css/lib/reset.css" />
+  <!--  <link rel="stylesheet" href="./css/">-->
+  <!--[if lte IE 9]>
+    <script src="./js/dist/html5shiv.min.js"></script>
+    <script src="./js/dist/ie9.min.js"></script>
+  <![endif]-->
+  <script src="./js/jquery/jquery-1.12.2.min.js"></script>
+  <script src="./js/jquery/jquery-migrate-1.2.1.min.js"></script>
+  <script src="./js/jquery/jquery-ui.min.js"></script>
+  <title>Document</title>
+  <style>
+    #header{width: 100%; height: 50px; background-color: #ccc; border-bottom: 1px solid  #555;}
+    #content{width: 80%;height: 500px;margin: 10px auto;border: 1px solid #0af; position: relative; overflow: hidden;}
+    .btn{width: 100%; height: 0; position: relative;}
+    .btn>button{width: 50px;height: 500px; position: absolute; top:0; background-color:rgba(255,255,255,0.5);}
+    .btn>button:hover{background-color:rgba(255,255,255,0.8);}
+    .btn>button.l_btn{left: 0;}
+    .btn>button.r_btn{right: 0;}
+    
+    .ban{width: 600%; height: 100%; margin-left: -100%;}
+    .ban>li{width:calc(100% / 6); height: 100%; float:left; text-align: center; line-height: 500px; font-size: 4rem;}
+    .box1{background-color:#0cf;}
+    .box2{background-color:#f5c;}
+    .box3{background-color:#aac;}
+    .box4{background-color:#ac7;}
+    .box5{background-color:#7ac;}
+    
+    .ind{width: 400px; height: 20px; position: absolute; bottom: 10px; left: 50%; margin-left: -200px;}
+    .ind>li{width: 20px; height: 20px; background-color:#fff; border-radius:10px; float: left; margin-left: 30px;text-align: center; line-height: 20px; cursor: pointer; transition:all 0.5s;}
+    .ind>li span{width: 0;height: 0;display: block;overflow: hidden;}
+    .ind>li:hover{background-color: #faa; }
+    .ind>li.indWidth{width:60px;  }
+  </style>
+  <script></script>
+</head>
+<body>
+  <div id="header">슬라이드 배너만들기2</div>
+  <div id="content" class="banner_box">
+    <div class="btn">
+      <button class="l_btn">&lt;</button>
+      <button class="r_btn">&gt;</button>
+    </div>
+      <ul class="ban">
+        <li class="box1">banner_01</li>
+        <li class="box2">banner_02</li>
+        <li class="box3">banner_03</li>
+        <li class="box4">banner_04</li>
+        <li class="box5">banner_05</li>
+      </ul>
+      <ul class="ind">
+        <li class="ind1"><span>1</span></li>
+        <li class="ind2"><span>2</span></li>
+        <li class="ind3"><span>3</span></li>
+        <li class="ind4"><span>4</span></li>
+        <li class="ind5"><span>5</span></li>
+      </ul>
+  </div>
+  <script>
+    (function($){
+      'use strict';
+      
+      var banner = $('.ban'),
+          banLi = banner.find('li'),
+          banLiFirst = banner.find('li').first(),
+          banLiWid = parseInt(banLi.width()),
+          banLihei = banner.find('li').height(),
+          
+          ind = $('.ind'),
+          indLi = ind.find('li'),
+          indLiFirst = ind.find('li').first(),
+          l_btn = $('.l_btn'),
+          r_btn = $('.r_btn'),
+          
+          
+          slideTime = 1000,
+          settingTime = 1100;
+      
+      
+      // 인디게이터 크기 활성화
+      indLiFirst.addClass('indWidth');
+      
+      // 인디게이터 위치 맞게 변경
+//      var bannerMarginCut = Math.abs( parseInt(banner.css('margin-left') ) ) / banLiWid;
+//      console.log(bannerMarginCut);
+//      indLi.eq(bannerMarginCut - 1).addClass('indWidth');
+//      var inTest = indLi.eq(-bannerMarginCut + 1);
+      
+      // 첫번째 이미지 보이기
+        banLi.last().clone().prependTo('.ban');
+        indLi.last().clone().prependTo('.ind');  
+      
+      // 인디게이터 표시 및 위치 이동
+      indLi.on('click', function(){
+       var $this = $(this),
+           index = $this.index(),
+           indexPlus = index - 1,
+           banLi = banner.find('li'),
+           banLiWid = banner.find('li').width();
+           
+          $this.addClass('indWidth')
+               .siblings().removeClass('indWidth');
+          banner.stop().animate({'margin-left':-banLiWid*index},slideTime,function(){
+        });
+      });
+      
+      // slidebtn 버튼클릭
+      l_btn.on('click', function(){
+          var bannerML = parseInt(banner.css('margin-left'));
+          if(bannerML == -banLiWid){
+            banner.stop().delay(100).animate({'margin-left':"+="+banLiWid},slideTime, function(){
+              banner.css({'margin-left':-banLiWid*5})
+            });
+            $('.ind li').last().addClass('indWidth').siblings().removeClass('indWidth');
+          }else{
+            banner.stop().delay(100).animate({'margin-left':"+="+banLiWid},slideTime)
+            var bannerMarginCut = Math.abs( parseInt($('.ban').css('margin-left') ) ) / $('.ban').find('li').width();
+             $('.ind li').eq(bannerMarginCut-1).addClass('indWidth').siblings().removeClass('indWidth');
+            console.log(bannerMarginCut);
+          };
+        });
+      var rightBtn = function(){
+        r_btn.on('click', function(){
+            var bannerML = parseInt(banner.css('margin-left'));
+            if(bannerML <= -banLiWid*5){
+              banner.css({'margin-left':0}).stop().delay(100).animate({'margin-left':"-="+banLiWid},slideTime);
+            }else{
+              banner.stop().delay(100).animate({'margin-left':"-="+banLiWid},slideTime)
+            };
+          var bannerMarginCut = Math.abs( parseInt($('.ban').css('margin-left') ) ) / $('.ban').find('li').width();
+           $('.ind li').eq(bannerMarginCut+1).addClass('indWidth').siblings().removeClass('indWidth');
+          console.log(bannerMarginCut);
+        });
+      }
+      rightBtn();
+      
+      
+      indLi = ind.find('li').eq(0);
+      indLi.first().css({'display':'none'});
+   
+    // 자동움직임
+      // var timer;
+      // 일정한 시간간격을 두고 움직이는기능 : setInterval
+      function startBtn(){ settingTime = setInterval('$(".r_btn").click()', 2000) };
+      //setInterval 취소시키는 기능: clearInterval
+      function stopBtn(){	clearInterval( settingTime )};
+      startBtn()
+      $('.banner_box').on({mouseenter:stopBtn ,mouseleave:startBtn});
+    })(this.jQuery);
+  </script>
+</body>
+</html>
