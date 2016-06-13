@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/lib/normalize.css" />
+    <title>Document</title>
+    <style>
+        .container{width: 100vw; height: auto;}
+        article{width: 100vw; height: 100vh; text-align: center; line-height: 100vh;
+            font-size: 4rem;}
+        .box_1{background-color:#fca;}
+        .box_2{background-color:#aca;}
+        .box_3{background-color:#caa;}
+        .box_4{background-color:#cfa;}
+        .box_5{background-color:#acf;}
+        .box_6{background-color:#ffa;}
+        .box_7{background-color:#c7f;}
+    </style>
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            var article_H = $('article').height(),
+                timed = 1000;
+
+            // function amouse(){
+            //   $('article').on('mouseenter', function(){
+            //     var win_index = $(this).index();
+            //     var win_i = win_index - 1;
+            //     var win_offset = article_H * win_i;
+            //     console.log( win_offset );
+            //     return win_offset;
+            //   });
+            // };
+
+            $("html, body").on('mousewheel DOMMouseScroll', function(e) {
+                var E = e.originalEvent;
+                var delta = E.deltaY;
+                var win_index = $(this).index();
+                // console.log(win_index);
+                 if(delta > 0){
+
+                  $('html, body').stop().animate({'scrollTop':'+=' + article_H }, timed);
+                  // console.log('마우스 휠을 내렸습니다.');
+                 } 
+                else {
+                   $('html, body').stop().animate({'scrollTop': '-=' + article_H}, timed);
+                  // console.log('마우스 휠을 올렸습니다.');
+                }
+            });
+        });
+   </script>
+</head>
+<body>
+    <div class="container">
+        <article class="box_1">box_1</article>
+        <article class="box_2">box_2</article>
+        <article class="box_3">box_3</article>
+        <article class="box_4">box_4</article>
+        <article class="box_5">box_5</article>
+        <article class="box_6">box_6</article>
+        <article class="box_7">box_7</article>
+    </div>
+</body>
+</html>

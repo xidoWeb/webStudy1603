@@ -12,13 +12,15 @@
     <script src="./js/dist/html5shiv.min.js"></script>
     <script src="./js/dist/ie9.min.js"></script>
   <![endif]-->
-  <script src="./js/jquery/jquery-1.12.2.min.js"></script>
-  <script src="./js/jquery/jquery-migrate-1.2.1.min.js"></script>
+  <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+  <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
   <script src="./js/jquery/jquery-ui.min.js"></script>
+<!--   <script src="http://code.jquery.com/jquery.min.js"></script> -->
   <title>Document</title>
   <style>
     #header{width: 100%; height: 50px; background-color: #ccc; border-bottom: 1px solid  #555;}
-    #content{width: 80%;height: 500px;margin: 10px auto;border: 1px solid #0af; position: relative; overflow: hidden;}
+    #content{width: 100vw;height: 500px;margin: 10px auto;border: 1px solid #0af; position: relative;
+     overflow: hidden; }
     .btn{width: 100%; height: 0; position: relative;}
     .btn>button{width: 50px;height: 500px; position: absolute; top:0; background-color:rgba(255,255,255,0.5);}
     .btn>button:hover{background-color:rgba(255,255,255,0.8);}
@@ -37,7 +39,7 @@
     .ind>li{width: 20px; height: 20px; background-color:#fff; border-radius:10px; float: left; margin-left: 30px;text-align: center; line-height: 20px; cursor: pointer; transition:all 0.5s;}
     .ind>li span{width: 0;height: 0;display: block;overflow: hidden;}
     .ind>li:hover{background-color: #faa; }
-    .ind>li.indWidth{width:60px;  }
+    .ind>li.indWidth{width:60px; background-color: #fa0;  box-shadow:2px 2px 2px #515151;}
   </style>
   <script></script>
 </head>
@@ -80,8 +82,8 @@
           r_btn = $('.r_btn'),
           
           
-          slideTime = 1000,
-          settingTime = 1100;
+          slideTime = 1000,  // 배너움직이는 시간
+          settingTime = 1100; // 슬라이가 작동되게 하는 시간(버튼)
       
       
       // 인디게이터 크기 활성화
@@ -94,11 +96,13 @@
 //      var inTest = indLi.eq(-bannerMarginCut + 1);
       
       // 첫번째 이미지 보이기
-        banLi.last().clone().prependTo('.ban');
-        indLi.last().clone().prependTo('.ind');  
+        banLi.last().clone().prependTo('.ban'); // banLi 배너내부의 li (하나의 배너부분)
+        indLi.last().clone().prependTo('.ind'); // indLi  인디케이터의 하나
       
       // 인디게이터 표시 및 위치 이동
-      indLi.on('click', function(){
+      
+      
+       indLi.on('click', function(){
        var $this = $(this),
            index = $this.index(),
            indexPlus = index - 1,
@@ -111,8 +115,10 @@
         });
       });
       
-      // slidebtn 버튼클릭
-      l_btn.on('click', function(){
+      
+      // slidebtn 버튼클릭     
+      
+       l_btn.on('click', function(){
           var bannerML = parseInt(banner.css('margin-left'));
           if(bannerML == -banLiWid){
             banner.stop().delay(100).animate({'margin-left':"+="+banLiWid},slideTime, function(){
@@ -126,6 +132,11 @@
             console.log(bannerMarginCut);
           };
         });
+        
+       
+      
+      
+      
       var rightBtn = function(){
         r_btn.on('click', function(){
             var bannerML = parseInt(banner.css('margin-left'));
@@ -142,17 +153,24 @@
       rightBtn();
       
       
+     
+     
       indLi = ind.find('li').eq(0);
       indLi.first().css({'display':'none'});
    
+  
+
     // 자동움직임
       // var timer;
       // 일정한 시간간격을 두고 움직이는기능 : setInterval
       function startBtn(){ settingTime = setInterval('$(".r_btn").click()', 2000) };
       //setInterval 취소시키는 기능: clearInterval
       function stopBtn(){	clearInterval( settingTime )};
-      startBtn()
+      startBtn();
       $('.banner_box').on({mouseenter:stopBtn ,mouseleave:startBtn});
+
+
+
     })(this.jQuery);
   </script>
 </body>
