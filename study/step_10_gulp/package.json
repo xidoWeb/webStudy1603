@@ -1,0 +1,18 @@
+{
+  "name": "gulp_test",
+  "version": "1.0.0",
+  "description": "> 자동화툴 : 압축, 축소, 병합, 변환 손쉽게 처리하는 프론트앤드 기술",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

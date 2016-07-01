@@ -1,0 +1,39 @@
+body, html {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #acc;
+  border-bottom: 1px solid  #f06; }
+
+.container::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.headbox {
+  width: 100%;
+  height: 300px;
+  float: left;
+  background-color: #aac; }
+
+.article {
+  width: 50%;
+  height: 500px;
+  float: left;
+  background-color: #f1c; }
+
+.section {
+  width: 50%;
+  height: 500px;
+  float: left;
+  background-color: #fa1; }
+
+.footer {
+  width: 100%;
+  height: 100px;
+  float: left;
+  background-color: #f96; }
